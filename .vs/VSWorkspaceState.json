@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Hospital_Management_System"
+    "\\Hospital_Management_System",
+    "\\Hospital_Management_System\\Views",
+    "\\Hospital_Management_System\\Views\\Shared"
   ],
-  "SelectedNode": "\\Hospital_Management_System\\Program.cs",
+  "SelectedNode": "\\Hospital_Management_System\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }
