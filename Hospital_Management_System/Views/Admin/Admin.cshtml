@@ -1,0 +1,21 @@
+﻿@model List<demo.Models.StaffViewModel>
+<!-- Display the data in the table -->
+<table>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Administration Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var admin in Model)
+        {
+            <tr>
+                <td>@admin.FullName</td>
+                <td>@admin.Gender</td>
+                <td>@admin.administration_type</td>
+            </tr>
+        }
+    </tbody>
+</table>

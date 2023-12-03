@@ -59,3 +59,14 @@ E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\re
 E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
 E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
 E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Humanizer.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\MySqlConnector.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\System.CodeDom.dll
+E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CopyComplete

@@ -4,21 +4,15 @@ using System.Reflection.Metadata;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Numerics;
+using Hospital_Management_System.Models;
 
 namespace demo.Models
 {
-    public class Staff
+    public class Staff : Person
     {
-        [Key]
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public DateOnly BDate { get; set; }
+        
         public int Salary { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string jobTitle { get; set; }
-        public string Password { get; set; }
+        public string JobTitle { get; set; }
 
         [ForeignKey("Department")]
         public int dept_id { get; set; }
