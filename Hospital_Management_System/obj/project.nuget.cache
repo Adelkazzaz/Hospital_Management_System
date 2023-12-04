@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e4hiGa+VpbsPphsULElQCwykQ255cuSw9RMobhGQ7CXk16FfpOhyBY+5K4Rw0dtgZo/eAVByYaJ0P9rWqDfjLg==",
+  "dgSpecHash": "xVPuBgo3klM3c+NveHrq9FCUev6XU9eQQr5GRzdq3GlqNNSQRre5kGsg5NuiBdQSkIxY2on3Z+frw/fLAOYcMQ==",
   "success": true,
   "projectFilePath": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,11 @@
     "C:\\Users\\original\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\original\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\original\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\original\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\original\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\original\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\original\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\original\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\original\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
