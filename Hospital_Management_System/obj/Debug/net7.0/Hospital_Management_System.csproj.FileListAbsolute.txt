@@ -70,3 +70,45 @@ E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\My
 E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 E:\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\System.CodeDom.dll
 E:\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CopyComplete
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.Development.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.staticwebassets.runtime.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.exe
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.deps.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.runtimeconfig.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.pdb
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Humanizer.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\MySqlConnector.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\System.CodeDom.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.AssemblyReference.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.GeneratedMSBuildEditorConfig.editorconfig
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.AssemblyInfoInputs.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.AssemblyInfo.cs
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CoreCompileInputs.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.MvcApplicationPartsAssemblyInfo.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.RazorAssemblyInfo.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.RazorAssemblyInfo.cs
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.Hospital_Management_System.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.build.Hospital_Management_System.props
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Hospital_Management_System.props
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Hospital_Management_System.props
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.pack.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.build.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.development.json
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\bundle\Hospital_Management_System.styles.css
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\projectbundle\Hospital_Management_System.bundle.scp.css
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CopyComplete
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\refint\Hospital_Management_System.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\HMS\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
