@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Retardation\\collage shit\\3rd year\\1st term\\Visual Programming C#\\project\\HMS\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "E:\\Retardation\\collage shit\\3rd year\\1st term\\Visual Programming C#\\project\\HMS\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "E:\\Retardation\\collage shit\\3rd year\\1st term\\Visual Programming C#\\project\\HMS\\Hospital_Management_System\\Hospital_Management_System\\obj\\",
+=======
+    "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
+        "projectName": "Hospital_Management_System",
+        "projectPath": "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
+        "packagesPath": "C:\\Users\\Kazzaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\obj\\",
+>>>>>>> 23b12a51ab9c1020d085509a96d2e6393f13190e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Kazzaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 23b12a51ab9c1020d085509a96d2e6393f13190e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -79,7 +97,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+>>>>>>> 23b12a51ab9c1020d085509a96d2e6393f13190e
         }
       }
     }

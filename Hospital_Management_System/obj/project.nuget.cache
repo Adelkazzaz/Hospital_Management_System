@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "jaXux+ETJ/ZGhtjW4mxBw9CBlf9lmFMfD6tC1zrqMneD3ylwyD5bMzOajuP1hsZOsga3gcCRpyyBQtu4+Hlw8Q==",
   "success": true,
   "projectFilePath": "E:\\Retardation\\collage shit\\3rd year\\1st term\\Visual Programming C#\\project\\HMS\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
@@ -27,6 +28,35 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+=======
+  "dgSpecHash": "m8T9FUt0cV4N+gz/KxD8eiUF9+b9IlPWcnctE4i6NucMxG0MtXVnGRPR1nc3H4ZoQGrEMsZExna0swViOphJdA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kazzaz\\Workspace\\C_Sharp_Project\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.14\\microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.14\\microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.14\\microsoft.entityframeworkcore.design.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.14\\microsoft.entityframeworkcore.relational.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.14\\microsoft.entityframeworkcore.tools.7.0.14.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kazzaz\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+>>>>>>> 23b12a51ab9c1020d085509a96d2e6393f13190e
   ],
   "logs": []
 }
