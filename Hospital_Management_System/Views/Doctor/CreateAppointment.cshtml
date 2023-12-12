@@ -1,0 +1,27 @@
+﻿@model demo.Models.Appointment
+@{
+	Layout = "_Doctor";
+}
+
+
+
+	<div class="form-section table-data">
+
+	<form asp-controller="Doctor" asp-action="CreateAppointment" method="post">
+			<h1>Enter Appointment Details</h1>
+
+			<label asp-for="Patient_id">Patient ID:</label>
+			<input asp-for="Patient_id" required>
+
+			<label asp-for="Date">Appointment Date:</label>
+			<input asp-for="Date" style="color:var(--dark);" required>
+
+			<label asp-for="time">Appointment Time:</label>
+			<input asp-for="time" style="color:var(--dark);" required>
+
+			<label asp-for="Status">Status:</label>
+			<input asp-for="Status" required>
+
+			<button type="submit">Submit</button>
+		</form>
+	</div>

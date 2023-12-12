@@ -16,25 +16,6 @@ namespace Hospital_Management_System.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Departments",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Phone = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Office = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Departments", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Administrators",
                 columns: table => new
                 {
@@ -73,6 +54,32 @@ namespace Hospital_Management_System.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Departments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Phone = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Office = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Hospital_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Departments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Departments_Hospitals_Hospital_id",
+                        column: x => x.Hospital_id,
+                        principalTable: "Hospitals",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Staffs",
                 columns: table => new
                 {
@@ -81,6 +88,7 @@ namespace Hospital_Management_System.Migrations
                     Salary = table.Column<int>(type: "int", nullable: false),
                     JobTitle = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    No_Of_Hour = table.Column<int>(type: "int", nullable: false),
                     dept_id = table.Column<int>(type: "int", nullable: false),
                     hospital_id = table.Column<int>(type: "int", nullable: false),
                     FullName = table.Column<string>(type: "longtext", nullable: false)
@@ -88,13 +96,13 @@ namespace Hospital_Management_System.Migrations
                     Gender = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     BDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    Address = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Phone = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Address = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -136,18 +144,20 @@ namespace Hospital_Management_System.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Nurces",
+                name: "Nurses",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Specialization = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NurseShift = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Nurces", x => x.Id);
+                    table.PrimaryKey("PK_Nurses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Nurces_Staffs_Id",
+                        name: "FK_Nurses_Staffs_Id",
                         column: x => x.Id,
                         principalTable: "Staffs",
                         principalColumn: "ID",
@@ -162,27 +172,28 @@ namespace Hospital_Management_System.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nurce_id = table.Column<int>(type: "int", nullable: false),
+                    NurseId = table.Column<int>(type: "int", nullable: false),
                     FullName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Gender = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     BDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    Address = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Phone = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Address = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Patients", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Patients_Nurces_Nurce_id",
-                        column: x => x.Nurce_id,
-                        principalTable: "Nurces",
+                        name: "FK_Patients_Nurses_NurseId",
+                        column: x => x.NurseId,
+                        principalTable: "Nurses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -199,16 +210,17 @@ namespace Hospital_Management_System.Migrations
                     Status = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Patient_id = table.Column<int>(type: "int", nullable: false),
-                    DoctorId = table.Column<int>(type: "int", nullable: true)
+                    Doctor_id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Appointments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Appointments_Doctors_DoctorId",
-                        column: x => x.DoctorId,
+                        name: "FK_Appointments_Doctors_Doctor_id",
+                        column: x => x.Doctor_id,
                         principalTable: "Doctors",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Appointments_Patients_Patient_id",
                         column: x => x.Patient_id,
@@ -252,14 +264,19 @@ namespace Hospital_Management_System.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appointments_DoctorId",
+                name: "IX_Appointments_Doctor_id",
                 table: "Appointments",
-                column: "DoctorId");
+                column: "Doctor_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_Patient_id",
                 table: "Appointments",
                 column: "Patient_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Departments_Hospital_id",
+                table: "Departments",
+                column: "Hospital_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Hospitals_Administrator_id",
@@ -275,13 +292,12 @@ namespace Hospital_Management_System.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_MedicalRecords_Patient_id",
                 table: "MedicalRecords",
-                column: "Patient_id",
-                unique: true);
+                column: "Patient_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Patients_Nurce_id",
+                name: "IX_Patients_NurseId",
                 table: "Patients",
-                column: "Nurce_id");
+                column: "NurseId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Staffs_dept_id",
@@ -322,7 +338,7 @@ namespace Hospital_Management_System.Migrations
                 name: "Patients");
 
             migrationBuilder.DropTable(
-                name: "Nurces");
+                name: "Nurses");
 
             migrationBuilder.DropTable(
                 name: "Staffs");

@@ -1,0 +1,41 @@
+﻿@model List<demo.Models.Appointment>
+
+@{
+	Layout = "_Doctor";
+}
+
+
+	<div class="table-data">
+		<div class="order">
+			<div class="head">
+				<h3>Appointments</h3>
+				<i class='bx bx-search'></i>
+				<i class='bx bx-filter'></i>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Status</th>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Patient ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var appointment in Model)
+					{
+						<tr>
+							<td>@appointment.Id</td>
+							<td>@appointment.Date.ToString("yyyy-MM-dd")</td>
+							<td>@appointment.time.ToString("HH:mm:ss")</td>
+							<td>@appointment.Status</td>
+							<td>@appointment.Patient_id</td>
+						</tr>
+					}
+			
+				</tbody>
+			</table>
+		</div>
+	</div>
+

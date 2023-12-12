@@ -42,7 +42,7 @@ namespace Hospital_Management_System.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<int?>("DoctorId")
+                    b.Property<int>("Doctor_id")
                         .HasColumnType("int");
 
                     b.Property<int>("Patient_id")
@@ -57,7 +57,7 @@ namespace Hospital_Management_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DoctorId");
+                    b.HasIndex("Doctor_id");
 
                     b.HasIndex("Patient_id");
 
@@ -68,6 +68,9 @@ namespace Hospital_Management_System.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Hospital_id")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -83,6 +86,8 @@ namespace Hospital_Management_System.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Hospital_id");
 
                     b.ToTable("Departments");
                 });
@@ -156,16 +161,19 @@ namespace Hospital_Management_System.Migrations
 
                     b.HasIndex("Doctor_id");
 
-                    b.HasIndex("Patient_id")
-                        .IsUnique();
+                    b.HasIndex("Patient_id");
 
                     b.ToTable("MedicalRecords");
                 });
 
-            modelBuilder.Entity("demo.Models.Nurce", b =>
+            modelBuilder.Entity("demo.Models.Nurse", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int");
+
+                    b.Property<string>("NurseShift")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Specialization")
                         .IsRequired()
@@ -173,7 +181,7 @@ namespace Hospital_Management_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nurces");
+                    b.ToTable("Nurses");
                 });
 
             modelBuilder.Entity("demo.Models.Patient", b =>
@@ -204,6 +212,9 @@ namespace Hospital_Management_System.Migrations
                     b.Property<int>("Nurce_id")
                         .HasColumnType("int");
 
+                    b.Property<int>("NurseId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -214,7 +225,7 @@ namespace Hospital_Management_System.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("Nurce_id");
+                    b.HasIndex("NurseId");
 
                     b.ToTable("Patients");
                 });
@@ -247,6 +258,9 @@ namespace Hospital_Management_System.Migrations
                     b.Property<string>("JobTitle")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<int>("No_Of_Hour")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -287,9 +301,11 @@ namespace Hospital_Management_System.Migrations
 
             modelBuilder.Entity("demo.Models.Appointment", b =>
                 {
-                    b.HasOne("demo.Models.Doctor", null)
+                    b.HasOne("demo.Models.Doctor", "Doctor")
                         .WithMany("Appointments")
-                        .HasForeignKey("DoctorId");
+                        .HasForeignKey("Doctor_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("demo.Models.Patient", "Patient")
                         .WithMany("Appointments")
@@ -297,7 +313,20 @@ namespace Hospital_Management_System.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Doctor");
+
                     b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("demo.Models.Department", b =>
+                {
+                    b.HasOne("demo.Models.Hospital", "Hospital")
+                        .WithMany()
+                        .HasForeignKey("Hospital_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hospital");
                 });
 
             modelBuilder.Entity("demo.Models.Doctor", b =>
@@ -331,8 +360,8 @@ namespace Hospital_Management_System.Migrations
                         .IsRequired();
 
                     b.HasOne("demo.Models.Patient", "Patient")
-                        .WithOne("MedicalRecord")
-                        .HasForeignKey("demo.Models.MedicalRecord", "Patient_id")
+                        .WithMany("MedicalRecord")
+                        .HasForeignKey("Patient_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -341,7 +370,7 @@ namespace Hospital_Management_System.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("demo.Models.Nurce", b =>
+            modelBuilder.Entity("demo.Models.Nurse", b =>
                 {
                     b.HasOne("demo.Models.Staff", "Staff")
                         .WithMany("Nurces")
@@ -354,13 +383,13 @@ namespace Hospital_Management_System.Migrations
 
             modelBuilder.Entity("demo.Models.Patient", b =>
                 {
-                    b.HasOne("demo.Models.Nurce", "Nurce")
+                    b.HasOne("demo.Models.Nurse", "Nurse")
                         .WithMany("Patients")
-                        .HasForeignKey("Nurce_id")
+                        .HasForeignKey("NurseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Nurce");
+                    b.Navigation("Nurse");
                 });
 
             modelBuilder.Entity("demo.Models.Staff", b =>
@@ -405,7 +434,7 @@ namespace Hospital_Management_System.Migrations
                     b.Navigation("StaffList");
                 });
 
-            modelBuilder.Entity("demo.Models.Nurce", b =>
+            modelBuilder.Entity("demo.Models.Nurse", b =>
                 {
                     b.Navigation("Patients");
                 });
@@ -414,8 +443,7 @@ namespace Hospital_Management_System.Migrations
                 {
                     b.Navigation("Appointments");
 
-                    b.Navigation("MedicalRecord")
-                        .IsRequired();
+                    b.Navigation("MedicalRecord");
                 });
 
             modelBuilder.Entity("demo.Models.Staff", b =>

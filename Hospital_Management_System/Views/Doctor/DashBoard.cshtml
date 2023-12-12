@@ -1,0 +1,56 @@
+﻿@model List<Hospital_Management_System.ViewModel.DoctorPatient>
+@{
+	Layout = "_Doctor";
+}
+
+
+
+	<ul class="box-info">
+		<li>
+			<i class='bx bxs-spreadsheet'></i>
+			<span class="text">
+				<h3>20</h3>
+				<p>Appointments Left Today</p>
+			</span>
+		</li>
+		<li>
+			<i class='bx bx-calendar-check'></i>
+			<span class="text">
+				<h3>15</h3>
+				<p>Appointments Done Today</p>
+			</span>
+		</li>
+	</ul>
+
+	<div class="table-data">
+		<div class="order">
+			<div class="head">
+				<h3>Recent Patients</h3>
+				<i class='bx bx-search'></i>
+				<i class='bx bx-filter'></i>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Pateint Name</th>
+						<th>Last Visted</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach(var i in Model)
+				{
+					<tr>
+						<td>
+							<p>@i.FullName</p>
+						</td>
+						<td>@i.time</td>
+						<td><span>@i.Status</span></td>
+						<td> <a href="/Dcotor/PatientDetails">Details</a> </td>
+					</tr>
+				}
+			</tbody>
+			</table>
+		</div>
+	</div>

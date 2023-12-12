@@ -18,12 +18,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\HMS\Hospital_Management_System\Hospital_Management_System
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/Admin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW4uY3NodG1s
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nRG9jdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/doctors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXGRvY3RvcnMuY3NodG1s
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngNurses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nTnVyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngPatients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nUGF0aWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/AddMedicalRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEFkZE1lZGljYWxSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/CreateAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZUFwcG9pbnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERhc2hCb2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DisplayAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERpc3BsYXlBcHBvaW50bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/_Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXF9Eb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Home/Index.cshtml]
@@ -36,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ALayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]
