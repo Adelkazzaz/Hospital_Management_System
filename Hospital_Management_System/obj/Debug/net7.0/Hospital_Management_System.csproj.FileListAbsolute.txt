@@ -112,3 +112,4 @@ C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Ma
 C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
 C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
 C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
+C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.sourcelink.json
