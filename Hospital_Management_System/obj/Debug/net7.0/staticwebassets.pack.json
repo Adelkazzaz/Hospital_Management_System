@@ -9,12 +9,24 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
       "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\style.css",
+      "PackagePath": "staticwebassets\\js\\style.css"
     },
     {
       "Id": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\lib\\bootstrap\\LICENSE",

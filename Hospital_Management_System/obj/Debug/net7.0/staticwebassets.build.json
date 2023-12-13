@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J3BIwZWe0325rRgw5sAg2tI3EtexqS5iVsTKfcRiJDs=",
+  "Hash": "1AQmtlpz4NLh8K6p3riVhkwlMSykTy2qNVzg4lGOQ9M=",
   "Source": "Hospital_Management_System",
   "BasePath": "_content/Hospital_Management_System",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\css\\style.css",
+      "SourceId": "Hospital_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\",
+      "BasePath": "_content/Hospital_Management_System",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\favicon.ico",
       "SourceId": "Hospital_Management_System",
       "SourceType": "Discovered",
@@ -85,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\script.js",
+      "SourceId": "Hospital_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\",
+      "BasePath": "_content/Hospital_Management_System",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
+    },
+    {
       "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\site.js",
       "SourceId": "Hospital_Management_System",
       "SourceType": "Discovered",
@@ -100,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\js\\style.css",
+      "SourceId": "Hospital_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\",
+      "BasePath": "_content/Hospital_Management_System",
+      "RelativePath": "js/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\style.css"
     },
     {
       "Identity": "E:\\HMS\\Hospital_Management_System\\Hospital_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

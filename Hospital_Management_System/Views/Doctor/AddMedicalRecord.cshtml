@@ -1,0 +1,29 @@
+﻿@model demo.Models.MedicalRecord
+@{
+    Layout = "_Doctor";
+    ViewData["Title"] = "Add Medical Records";
+}
+
+<div class="form-section table-data">
+
+    <form asp-controller="Doctor" asp-action="AddMedicalRecord" method="post">
+        <h1>Enter Record Details</h1>
+
+        <label asp-for="Patient_id">Patient ID:</label>
+        <input asp-for="Patient_id" required>
+
+        <label asp-for="Diagnosis">Diagnosis:</label>
+        <input asp-for="Diagnosis" required>
+
+        <label asp-for="Treatment">Treatment:</label>
+        <input asp-for="Treatment" required>
+
+        <label asp-for="StartDate">Appointment Date:</label>
+        <input asp-for="StartDate" style="color:var(--dark);" required>
+
+        <label asp-for="EndDate">Appointment Time:</label>
+        <input asp-for="EndDate" style="color:var(--dark);" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
