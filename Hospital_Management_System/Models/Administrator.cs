@@ -8,7 +8,8 @@ namespace demo.Models
 	{
 		[Key, ForeignKey("Staff")]
 		public int Id { get; set; }
-		public string administration_type { get; set; }
+		public string Specialty { get; set; }
+		public string Position { get; set; }
 
 		public virtual Staff Staff { get; set; }
 		public virtual Hospital Hospital { get; set; }

@@ -20,7 +20,7 @@ namespace Hospital_Management_System.Controllers
 		   select new DoctorPatient
 		   {
 			   FullName = p.FullName,
-			   time = a.time,
+			   time = a.Date,
 			   Status = a.Status
 		   }
 	   ).ToList();

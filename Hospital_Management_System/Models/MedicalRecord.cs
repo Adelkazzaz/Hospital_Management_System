@@ -19,7 +19,5 @@ namespace demo.Models
 		public int Doctor_id { get; set; }
 		public virtual Doctor Doctor { get; set; }
 
-
-
 	}
 }
