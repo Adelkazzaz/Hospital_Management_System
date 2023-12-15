@@ -13,8 +13,9 @@ namespace demo.Models
 	{
 
 		public int Salary { get; set; }
-		public string JobTitle { get; set; }
+		public string Role { get; set; }
 		public int No_Of_Hour { get; set; }
+		public string Shift { get; set; }
 
 		[ForeignKey("Department")]
 		public int dept_id { get; set; }

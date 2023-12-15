@@ -5,8 +5,7 @@ namespace demo.Models
 	public class Appointment
 	{
 		public int Id { get; set; }
-		public DateOnly Date { get; set; }
-		public DateTime time { get; set; }
+		public DateTime Date { get; set; }
 		public string Status { get; set; }
 
 

@@ -7,6 +7,7 @@ namespace demo.Models
 {
 	public class Patient : Person
 	{
+		public string Blood_Type { get; set; }
 
 		[ForeignKey("Nurce")]
 		public int Nurce_id { get; set; }

@@ -11,21 +11,8 @@ namespace Hospital_Management_System.Controllers
 		HMSEntites context = new HMSEntites();
 		public ActionResult MngDoctors()
 		{
-			List<StaffViewModel> Doctors = new();
-			Doctors = (
-		   from s in context.Staffs
-		   join d in context.Doctors on s.ID equals d.Id
-		   where s.JobTitle == "Doctor"
-		   select new StaffViewModel
-		   {
-			   FullName = s.FullName,
-			   Phone = s.Phone,
-			   Email = s.Email,
-			   Salary = s.Salary,
-			   Specialization = d.Specialization
-		   }
-	   ).ToList();
-			return View("MngDoctors", Doctors);
+
+			return View("MngDoctors");
 		}
 		public ActionResult MngNurses()
 		{
@@ -76,7 +63,7 @@ namespace Hospital_Management_System.Controllers
 							 {
 								 FullName = s.FullName,
 								 Gender = s.Gender,
-								 AdministrationType = a.administration_type
+								 AdministrationType = a.Specialty
 							 }).ToList();
 
 
@@ -88,7 +75,7 @@ namespace Hospital_Management_System.Controllers
 				listItem.FullName = item.FullName;
 
 				listItem.Gender = item.Gender;
-				listItem.Admin.administration_type = item.AdministrationType;
+				listItem.Admin.Specialty = item.AdministrationType;
 
 
 				//add your remaining fields
