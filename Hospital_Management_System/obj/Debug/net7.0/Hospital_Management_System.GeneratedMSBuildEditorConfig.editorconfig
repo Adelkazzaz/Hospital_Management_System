@@ -9,79 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hospital_Management_System
 build_property.RootNamespace = Hospital_Management_System
-build_property.ProjectDir = E:\HMS\Hospital_Management_System\Hospital_Management_System\
+build_property.ProjectDir = C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\HMS\Hospital_Management_System\Hospital_Management_System
+build_property.MSBuildProjectDirectory = C:\Users\Kazzaz\Workspace\C_Sharp_Project\Hospital_Management_System\Hospital_Management_System
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngDoctors.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngDoctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nRG9jdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngNurses.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngNurses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nTnVyc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngPatients.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngPatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nUGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/AddMedicalRecord.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Doctor/AddMedicalRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEFkZE1lZGljYWxSZWNvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/CreateAppointment.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Doctor/CreateAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZUFwcG9pbnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DashBoard.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DashBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERhc2hCb2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DisplayAppointment.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Doctor/DisplayAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERpc3BsYXlBcHBvaW50bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Doctor/_Doctor.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Doctor/_Doctor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXF9Eb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Home/Index.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/Error.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ALayout.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ALayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Staff/Staff.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Staff/Staff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3RhZmYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/_ViewImports.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/_ViewStart.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HMS/Hospital_Management_System/Hospital_Management_System/Views/Shared/_Layout.cshtml]
+[C:/Users/Kazzaz/Workspace/C_Sharp_Project/Hospital_Management_System/Hospital_Management_System/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-47q26s0v87
