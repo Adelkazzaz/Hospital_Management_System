@@ -1,0 +1,502 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --gery: #eee;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--gery);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+    .navigation ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+    .navigation ul li a .title {
+        position: relative;
+        display: block;
+        padding: 0 10px;
+        height: 60px;
+        line-height: 60px;
+        text-align: start;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--gery);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--gery);
+  pointer-events: none;
+}
+
+/* ===================== Main ===================== */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--gery);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.content-section {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-item {
+    margin-bottom: 15px;
+}
+
+.detail-value {
+    font-weight: bold;
+    color: #333;
+}
+
+.status-confirmed {
+    color: #28a745; /* Green color for confirmed status */
+}
+
+.content-card {
+    background: var(--black);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.record-details {
+    margin-bottom: 10px;
+}
+
+.add-record-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#addRecordButton {
+    padding: 10px 15px;
+    background: #2a2185; /* Use your preferred button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ======================= Cards ====================== */
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding: 50px;
+}
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cardBox .card .cardName {
+  color: var(--black2);
+  font-size: 2.2rem;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+/* ================== Tables ============== */
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  margin-top: 10px;
+}
+
+.details .recentOrders {
+  position: relative;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  overflow: hidden; /* Add this to hide overflow for a cleaner look */
+}
+
+.details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjusted margin for better spacing */
+}
+
+.cardHeader h2 {
+  font-weight: 600;
+  color: var(--blue);
+  font-size: 20px; /* Adjusted margin for better spacing */
+}
+
+.button-cell {
+  text-align: center; /* Center the button within the cell */
+}
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.cardHeader .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.details .recentOrders table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+ /* margin-bottom: 0; /* Remove default margin-bottom to eliminate white space */
+}
+
+.details .recentOrders table th,
+.details .recentOrders table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+  border-right: 1px solid var(--gray); /* Add vertical line */
+}
+
+.details .recentOrders table th:last-child,
+.details .recentOrders table td:last-child {
+  border-right: none;
+}
+
+.details .recentOrders table thead td {
+  font-weight: 600;
+  color: var(--blue);
+  padding-bottom: 16px; /* Increased padding to align with cell content */
+}
+
+.details .recentOrders table tbody tr {
+  color: var(--black1);
+}
+
+.details .recentOrders table tbody tr:hover {
+  background: var(--gray);
+}
+
+.details .recentOrders table tbody tr td:last-child {
+  text-align: center;
+}
+
+/* Additional style for better alignment of cell contents */
+.details .recentOrders table tbody tr td {
+  vertical-align: center;
+}
+
+/* ====================== Forms ========================== */
+
+.form-section {
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+    .form-section h2 {
+        font-weight: 600;
+        color: var(--blue);
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+label {
+    color: var(--black1);
+    font-size: 16px;
+}
+
+input { /* Apply the same style to both input and select elements */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--black1);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--black1);
+    border-radius: 6px;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23222" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+    /* Enhance appearance of selected items */
+    select:focus,
+    select:active,
+    select:hover {
+        border-color: var(--blue);
+        box-shadow: 0 0 5px rgba(42, 33, 133, 0.5);
+    }
+
+    /* Style for the dropdown options */
+    select:focus,
+    select:active,
+    select:hover,
+    option {
+        background-color: #f9f9f9;
+        color: var(--black1);
+    }
+
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 65px;
+    cursor: pointer;
+}
+/* ====================== Forms ========================== */
+
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details .recentOrders table {
+    font-size: 14px; /* Decreased font size for better responsiveness */
+  }
+  .details .recentOrders table th,
+  .details .recentOrders table td {
+    padding: 10px; /* Adjusted padding for better spacing */
+  }
+  .details .recentOrders table thead td {
+    font-size: 14px; /* Decreased font size for better responsiveness */
+  }
+}
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2 {
+    font-size: 20px;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .main.active .toggle {
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}
