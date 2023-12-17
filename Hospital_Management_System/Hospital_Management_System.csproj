@@ -19,4 +19,11 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Doctor\AddMedicalRecord.cshtml" />
+    <None Include="Views\Doctor\CreateAppointment.cshtml" />
+    <None Include="Views\Doctor\DisplayAppointment.cshtml" />
+    <None Include="Views\Doctor\_Doctor.cshtml" />
+  </ItemGroup>
+
 </Project>

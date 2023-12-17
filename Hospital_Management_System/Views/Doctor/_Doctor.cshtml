@@ -1,95 +1,101 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hospital</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-	<!-- Boxicons -->
-	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-
-	<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/css/DocStyle.css">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a asp-action="Index" asp-controller="Home">
+                        <span class="icon">
+                            <ion-icon src='data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="red" d="M15 2.013H9V9H2v6h7v6.987h6V15h7V9h-7z"%2F%3E%3C%2Fsvg%3E'></ion-icon>
+                        </span>
+                        <span style="font-size: 2.5rem;" class="title">Hospital</span>
+                    </a>
+                </li>
 
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand">
-			<i class='bx bx-plus-medical'></i>
-			<span class="text">Hospital</span>
-		</a>
-		<ul class="side-menu top">
-			<li>
-				<a asp-controller="Doctor" asp-action="DashBoard">
-					<i class='bx bxs-dashboard'></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a asp-controller="Doctor" asp-action="DisplayAppointment">
-					<i class='bx bxs-book'></i>
-					<span class="text">View Appointments</span>
-				</a>
-			</li>
-			<li>
-				<a asp-controller="Doctor" asp-action="CreateAppointment">
-					<i class='bx bxs-book-add'></i>
-					<span class="text">Create Appointments</span>
-				</a>
-			</li>
-			<li>
-				<a asp-controller="Doctor" asp-action="AddMedicalRecord">
-					<i class='bx bx-book-content'></i>
-					<span class="text">Add Medical Records</span>
-				</a>
-			</li>
-		</ul>
 
-		<ul class="side-menu">
-			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle'></i>
-					<span class="text">Logout</span>
-				</a>
-			</li>
-		</ul>
-	</section>
-	<!-- SIDEBAR -->
-	<!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu'></i>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="profile">
-				<img src="/img/people.png">
-			</a>
-		</nav>
-		<!-- NAVBAR -->
-		<!-- MAIN -->
-		<main>
-			<div class="head-title">
-				<div class="left">
-					<h1>Welcome Doctor</h1>
-				</div>
+                <li>
+                    <a asp-controller="Doctor" asp-action="DisplayAppointment">
+                        <span class="icon">
+                            <ion-icon name="reader-outline"></ion-icon>
+                        </span>
+                        <span class="title active">View Appointments</span>
+                    </a>
+                </li>
 
-			</div>
-			@RenderBody()	
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
+                <li>
+                    <a asp-controller="Doctor" asp-action="CreateAppointment">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="title">Create New Appointment</span>
+                    </a>
+                </li>
 
-	<script src="/js/script.js"></script>
+
+
+                <li style="transform: translateY(50vh);">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+
+            <!-- ================ Order Details List ================= -->
+
+            <div class="cardBox">
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">Welocme Doctor</div>
+                        <div class="cardName">Ahmed</div>
+                    </div>
+                </div>
+               
+                @RenderBody()
+
+            
+            </div>
+
+        </div>
+
+        <!-- =========== Scripts =========  -->
+        <script src="/js/main.js"></script>
+
+        <!-- ====== ionicons ======= -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>

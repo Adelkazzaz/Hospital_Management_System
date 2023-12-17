@@ -9,8 +9,8 @@ namespace demo.Models
 	{
 		public string Blood_Type { get; set; }
 
-		[ForeignKey("Nurce")]
-		public int Nurce_id { get; set; }
+		[ForeignKey("Nurse")]
+		public int Nurseid { get; set; }
 		public virtual Nurse Nurse { get; set; }
 
 		public virtual ICollection<MedicalRecord> MedicalRecord { get; set; }
