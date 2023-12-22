@@ -1,3 +1,102 @@
 ﻿@{
     ViewData["Title"] = "Register";
 }
+<main class="Reg-main">
+<section class="Reg-container">
+    <header class="Reg-header">Registration Form</header>
+    <form action="#" class="Reg-form">
+        <div class="Reg-input-box">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter full name" required />
+        </div>
+
+        <div class="Reg-input-box">
+            <label>Email Address</label>
+            <input type="text" placeholder="Enter email address" required />
+        </div>
+        <div class="Reg-input-box Reg-newPassword">
+            <label>New Password</label>
+            <div class="Reg-column">
+                <input type="password" placeholder="Enter New Password" required />
+                <input type="password" placeholder="Confirm New Password" required />
+            </div>
+        </div>
+
+        <div class="Reg-column">
+            <div class="Reg-input-box Reg-phoneNumber">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter phone number" required />
+            </div>
+            <div class="Reg-input-box Reg-birthDate">
+                <label>Birth Date</label>
+                <input type="date" placeholder="Enter birth date" required />
+            </div>
+            <div class="Reg-input-box Reg-bloodType">
+                <label>Blood type</label>
+                <div class="Reg-select-box">
+                    <select>
+                        <option hidden>Blood type</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>I Don't Know</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="Reg-gender-box">
+            <h3>Gender</h3>
+            <div class="Reg-gender-option">
+                <div class="Reg-gender">
+                    <input type="radio" id="Reg-check-male" name="gender" checked />
+                    <label for="Reg-check-male">Male</label>
+                </div>
+                <div class="Reg-gender">
+                    <input type="radio" id="Reg-check-female" name="gender" />
+                    <label for="Reg-check-female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="Reg-input-box Reg-address">
+            <label>Address</label>
+            <div class="Reg-column">
+                <div class="Reg-country-select-box Reg-select-box">
+                    <select>
+                        <option hidden>Country</option>
+                        <option>America</option>
+                        <option>Japan</option>
+                        <option>India</option>
+                        <option>Nepal</option>
+                    </select>
+                </div>
+            </div>
+            <div class="Reg-column">
+                <div class="Reg-city-select-box Reg-select-box">
+                    <select>
+                        <option hidden>Governorate</option>
+                        <option>America</option>
+                        <option>Japan</option>
+                        <option>India</option>
+                        <option>Nepal</option>
+                    </select>
+                </div>
+                <div class="Reg-gov-select-box Reg-select-box">
+                    <select>
+                        <option hidden>City</option>
+                        <option>America</option>
+                        <option>Japan</option>
+                        <option>India</option>
+                        <option>Nepal</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="Reg-button">Submit</button>
+    </form>
+</section>
+</main>
