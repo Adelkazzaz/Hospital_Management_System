@@ -1,9 +1,10 @@
 ﻿@using Hospital_Management_System.ViewModel;
 @using demo.Models
-@model List<PatientAppointmentViewModel>
+@model List<PatientAppointmentVM>
 @{
 	Layout = "_Doctor";
 }
+
 
 <div class="details">
 	<div class="recentOrders">
@@ -35,10 +36,9 @@
 						<td>@a.Appointment.Patient_id</td>
 						<td>@a.Appointment.Id</td>
 						<td class="button-cell">
-							<a asp-action="Details" asp-controller="Doctor"  class="button">
+							<a asp-action="Details" asp-controller="Doctor" asp-route-_patientid="@a.Appointment.Patient_id" asp-route-_docid="@a.Appointment.Doctor_id" asp-route-_appointmentid="@a.Appointment.Id" class="button">
 								Details
 							</a></td>
-
 					</tr>
 				}
 			</tbody>

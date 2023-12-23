@@ -1,0 +1,33 @@
+﻿@using demo.Models
+@model List<MedicalRecord>
+
+<div id="medicalRecordsContainer">
+    @foreach (var record in Model)
+    {
+        <div class="medical-card">
+            <table>
+                <tr>
+                    <th>Operation ID</th>
+                    <td>@record.Patient</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>@record.StartDate</td>
+                </tr>
+                <tr>
+                    <th>Doctor</th>
+                    <td>@record.Patient_id</td>
+                </tr>
+                <tr>
+                    <th>Disease</th>
+                    <td>@record.Diagnosis</td>
+                </tr>
+                <tr>
+                    <th>Treatment</th>
+                    <td>@record.Treatment</td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>
+<button id="loadMoreBtn" class="load-more-btn">Load More</button>

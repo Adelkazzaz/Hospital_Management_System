@@ -1,0 +1,74 @@
+﻿@model StaffDetailsVM
+
+@{
+    Layout = null;
+
+}
+<link rel="stylesheet" href="/css/StaffDetailsStyle.css" />
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+<section class="medical-records">
+
+    <div id="medicalRecordsContainer">
+
+        <div class="medical-card">
+            <table>
+                <tr>
+                    <th>Full Name</th>
+                    <td>@Model.FullName</td>
+                </tr>
+                <tr>
+                    <th>DepartmentName</th>
+                    <td>@Model.DepartmentName</td>
+                </tr>
+                <tr>
+                    <th>Specialization</th>
+                    <td>@Model.Specialization</td>
+                </tr>
+                <tr>
+                    <th>Qualifications</th>
+                    <td>@Model.Qualifications</td>
+                </tr>
+                <tr>
+                    <th>Role</th>
+                    <td>@Model.Role</td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>@Model.Phone</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Birth Date</th>
+                    <td>@Model.BDate</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>@Model.Gender</td>
+                </tr>
+                <tr>
+                    <th>Governorate</th>
+                    <td>@Model.Governorate</td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>@Model.City</td>
+                </tr>
+
+            </table>
+            <a class="btn btn-primary m-2" asp-action="Index">Go Back</a>
+
+
+
+        </div>
+
+
+    </div>
+
+</section>

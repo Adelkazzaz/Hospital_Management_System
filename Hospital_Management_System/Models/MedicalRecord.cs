@@ -1,17 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace demo.Models
 {
 	public class MedicalRecord
 	{
 		public int Id { get; set; }
+		[Required(ErrorMessage ="Please Enter a Date")]
 		public DateOnly StartDate { get; set; }
-		public DateOnly EndDate { get; set; }
-		public string Treatment { get; set; }
-		public string Diagnosis { get; set; }
+        [Required(ErrorMessage = "Please Enter a Treatment Doctor!")]
+        public string Treatment { get; set; }
+        [Required(ErrorMessage = "Please Enter a Diagnosis Doctor!")]
+        public string Diagnosis { get; set; }
 
 		[ForeignKey("Patient")]
-		public int Patient_id { get; set; }
+
+        [Required(ErrorMessage = "Please Enter a Pateint ID")]
+
+        public int Patient_id { get; set; }
 		public virtual Patient Patient { get; set; }
 
 
