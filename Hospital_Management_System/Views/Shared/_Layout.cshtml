@@ -12,6 +12,15 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="~/css/home-style.css" />
+    <link rel="stylesheet" href="~/css/sign-in-style.css" />
+    <link rel="stylesheet" href="~/css/register-style.css" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"></script>
+
 
     <!--==================== website-logo-And-title ====================-->
     <link rel="icon" type="image/x-icon" href="~/image/city-hospital.svg" />
@@ -26,7 +35,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="@Url.Action("Index", "Home")" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i> Home
                         </a>
                     </li>
@@ -41,12 +50,12 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="@Url.Action("Login", "Account")" class="nav__link">
                             <i class="uil uil-briefcase-alt nav__icon"></i> Login
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="@Url.Action("Register", "Account")" class="nav__link">
                             <i class="uil uil-scenery nav__icon"></i> Register
                         </a>
                     </li>
@@ -58,20 +67,14 @@
                 <!-- theme change button -->
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
                 <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
+                    <i class="uil uil-draggabledots"></i>
                 </div>
             </div>
         </nav>
     </header>
 
     <!--==================== Main ====================-->
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
+    @RenderBody()
     <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__bg">

@@ -18,12 +18,19 @@ namespace Hospital_Management_System.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
-		{
-			return View();
-		}
+        // Action to redirect to the login page
+        public ActionResult Login()
+        {
+            return RedirectToAction("Login", "Account");
+        }
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        // Action to redirect to the register page
+        public ActionResult Register()
+        {
+            return RedirectToAction("Register", "Account");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

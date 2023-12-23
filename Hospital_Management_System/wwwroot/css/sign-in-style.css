@@ -281,6 +281,11 @@ form.sign-in-form {
   padding: 3rem 17% 2rem 12%;
 }
 
+.content {
+    position: relative;
+    top: 20px;
+}
+
 .panel .content {
   color: #fff;
   transition: transform 0.9s ease-in-out;
@@ -363,6 +368,7 @@ form.sign-in-form {
   .panel p {
     font-size: 0.7rem;
     padding: 0.5rem 0;
+
   }
 
   .btn.transparent {
