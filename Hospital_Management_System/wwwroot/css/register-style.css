@@ -1,0 +1,149 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Reg-main {
+    min-height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient(-45deg, #2d9596 0%, #04befe 100%);
+    font-family: "Poppins", sans-serif;
+}
+
+.Reg-container {
+    position: relative;
+    top: 1rem;
+    margin-bottom:30px;
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.Reg-header {
+    position: relative;
+    top:2rem;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.Reg-form {
+    margin-top: 30px;
+}
+
+.Reg-input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+    .Reg-input-box label {
+        color: #333;
+    }
+
+.Reg-form :where(.Reg-input-box input, .Reg-select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.Reg-input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Reg-form .Reg-column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.Reg-form .Reg-gender-box {
+    margin-top: 20px;
+}
+
+.Reg-gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.Reg-form :where(.Reg-gender-option, .Reg-gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.Reg-form .Reg-gender {
+    column-gap: 5px;
+}
+
+.Reg-gender input {
+    accent-color: #265073;
+}
+
+.Reg-form :where(.Reg-gender input, .Reg-gender label) {
+    cursor: pointer;
+}
+
+.Reg-gender label {
+    color: #707070;
+}
+
+.Reg-address :where(input, .Reg-select-box) {
+    margin-top: 15px;
+}
+
+.Reg-select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+
+.Reg-form .Reg-button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #265073;
+}
+
+    .Reg-form .Reg-button:hover {
+        background: #2D9596;
+    }
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .Reg-form .Reg-column {
+        flex-wrap: wrap;
+    }
+
+    .Reg-form :where(.Reg-gender-option, .Reg-gender) {
+        row-gap: 15px;
+    }
+}

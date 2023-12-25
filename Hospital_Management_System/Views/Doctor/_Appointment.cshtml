@@ -1,0 +1,56 @@
+﻿@model demo.Models.Appointment
+
+<div class="content-section">
+    <h2>Appointment Details</h2>
+    <div class="details-item">
+        <label>Appointment ID:</label>
+        <span class="detail-value">@Model.Id</span>
+    </div>
+    <div class="details-item">
+        <label>Date/Time:</label>
+        <span class="detail-value">@Model.Date</span>
+    </div>
+    <div class="details-item">
+        <label>Status:</label>
+
+        @switch (Model.Status)
+        {
+        case "Canceled":
+                <span class="detail-value" id="status-display" style="color: #ff0000">@Model.Status</span>
+            break;
+        case "Scheduled":
+                <span class="detail-value" id="status-display" style="color: #ff9900">@Model.Status</span>
+            break;
+        case "Confirmed":
+                <span class="detail-value" id="status-display" style="color: #28a745">@Model.Status</span>
+            break;
+        default:
+            break;
+        }
+        <div id="editStatusForm" class="details-item">
+            <form asp-action="UpdateAppointmentStatus" asp-controller="Doctor" id="updateStatusForm" method="post">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Patient_id" />
+                <input type="hidden" asp-for="Doctor_id" />
+                <input type="hidden" asp-for="Date" />
+
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label">Update Status:</label>
+                    <span class="detail-value">
+                    <select asp-for="Status" class="form-control">
+                        <option value="Scheduled">Scheduled</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Canceled">Canceled</option>
+                    </select>
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="updateStatusButton">Save</button>
+                </div>
+            </form>
+        </div>
+        <div id="statusMessage"></div>
+    </div>
+</div>
+

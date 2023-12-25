@@ -1,0 +1,30 @@
+﻿@model demo.Models.Appointment
+@{
+    Layout = "_Patient";
+}
+
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Create New Appointment</h2>
+        </div>
+
+        <form class="form-section" asp-controller="Patient" asp-action="CreateAppointment" method="get">
+            <h1>Enter Appointment Details</h1>
+
+            <!-- Remove Patient_id input as it can be retrieved from the logged-in user or the session -->
+
+            <label asp-for="Date">Appointment Date:</label>
+            <input asp-for="Date" type="datetime-local" required>
+
+            <label asp-for="Status">Status:</label>
+            <input asp-for="Status" value="Scheduled" readonly>
+
+            <label asp-for="Doctor_id">Select Doctor:</label>
+            @Html.DropDownListFor(model => model.Doctor_id, ViewBag.Doctors as SelectList, "Select Doctor", new { required = true })
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</div>
