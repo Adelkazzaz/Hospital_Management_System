@@ -1,124 +1,124 @@
 ﻿@using Hospital_Management_System.ViewModel
-@using Hospital_Management_System.Models
-@model PatientAppointmentMedicalRecordVM
+@model List<PatientAppointmentMedicalRecordVM>
 
 @{
     Layout = "_Doctor";
+    var detail = Model.FirstOrDefault();
 
-   
-   
 }
 
 <div class="details">
 
     <div class="recentOrders">
         <!-- ================ Appointment Details ================= -->
-       
-        <partial name="_Appointment" model="@Model.Appointment" appointment="@Model.Appointment"/>
+        <div class="content-section">
+            <h2>Appointment Details</h2>
+            <div class="details-item">
+                <label>Appointment ID:</label>
+                <span class="detail-value">@detail.Appointment.Id</span>
+            </div>
+            <div class="details-item">
+                <label>Date/Time:</label>
+                <span class="detail-value">@detail.Appointment.Date</span>
+            </div>
+            <div class="details-item">
+                <label>Status:</label>
+                <span class="detail-value status-confirmed">@detail.Appointment.Status</span>
+            </div>
+        </div>
 
         <!-- ================ Patient Details ================= -->
         <div class="content-section">
             <h2>Patient Details</h2>
             <div class="details-item">
                 <label>Patient ID:</label>
-                <span class="detail-value">@Model.Patient.ID</span>
+                <span class="detail-value">789012</span>
             </div>
             <div class="details-item">
                 <label>Name:</label>
-                <span class="detail-value">@Model.Patient.FullName</span>
+                <span class="detail-value">John Doe</span>
             </div>
             <div class="details-item">
                 <label>Phone Number:</label>
-                <span class="detail-value">@Model.Patient.Phone</span>
+                <span class="detail-value">123-456-7890</span>
             </div>
             <div class="details-item">
                 <label>Age:</label>
-                <span class="detail-value">@ViewData["age"]</span>
+                <span class="detail-value">30</span>
             </div>
             <div class="details-item">
                 <label>Gender:</label>
-                <span class="detail-value">@Model.Patient.Gender</span>
+                <span class="detail-value">Male</span>
             </div>
             <div class="details-item">
                 <label>Blood Type:</label>
-                <span class="detail-value">@Model.Patient.Blood_Type</span>
+                <span class="detail-value">O+</span>
             </div>
         </div>
 
         <!-- ================ Medical History ================= -->
         <div class="content-section">
             <h2>Medical History</h2>
-            @foreach(var item in Model.MedicalRecords)
-            {
-                <div class="content-card">
-                    <div class="record-details">
-                        <label>Record ID:</label>
-                        <span class="detail-value">@item.Id</span>
-                    </div>
-                    <div class="record-details">
-                        <label>Start Date:</label>
-                        <span class="detail-value">@item.StartDate</span>
-                    </div>
-                    <div class="record-details">
-                        <label>Diagnosis:</label>
-                        <span class="detail-value">@item.Diagnosis</span>
-                    </div>
-                    <div class="record-details">
-                        <label>Treatment:</label>
-                        <span class="detail-value">@item.Treatment</span>
-                    </div>
+            <div class="content-card">
+                <div class="record-details">
+                    <label>Record ID:</label>
+                    <span class="detail-value">1</span>
                 </div>
-            }
-
+                <div class="record-details">
+                    <label>Date:</label>
+                    <span class="detail-value">2023-01-15</span>
+                </div>
+                <div class="record-details">
+                    <label>Diagnosis:</label>
+                    <span class="detail-value">Hypertension</span>
+                </div>
+                <div class="record-details">
+                    <label>Treatment:</label>
+                    <span class="detail-value">Prescription</span>
+                </div>
             </div>
-
+            
+            <!-- Repeat for each medical record -->
+            <div class="content-card">
+                <div class="record-details">
+                    <label>Record ID:</label>
+                    <span class="detail-value">1</span>
+                </div>
+                <div class="record-details">
+                    <label>Date:</label>
+                    <span class="detail-value">2023-01-15</span>
+                </div>
+                <div class="record-details">
+                    <label>Diagnosis:</label>
+                    <span class="detail-value">Hypertension</span>
+                </div>
+                <div class="record-details">
+                    <label>Treatment:</label>
+                    <span class="detail-value">Prescription</span>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="record-details">
+                    <label>Record ID:</label>
+                    <span class="detail-value">1</span>
+                </div>
+                <div class="record-details">
+                    <label>Date:</label>
+                    <span class="detail-value">2023-01-15</span>
+                </div>
+                <div class="record-details">
+                    <label>Diagnosis:</label>
+                    <span class="detail-value">Hypertension</span>
+                </div>
+                <div class="record-details">
+                    <label>Treatment:</label>
+                    <span class="detail-value">Prescription</span>
+                </div>
+                
+            </div>
             <div class="add-record-btn">
-                <a asp-action="AddMedicalRecord" asp-controller="Doctor" asp-route-_patietnid="@Model.Appointment.Patient_id" class="button">Add New Record</a>
+                <a asp-action="AddMedicalRecord" asp-controller="Doctor" class="button">Add New Record</a>
             </div>
+        </div>
     </div>
- </div>
-
-@section Scripts{
-    <script>
-        //update status ajax
-        $(document).ready(function () {
-            $('#updateStatusButton').click(function () {
-                event.preventDefault();
-
-                $.ajax({
-                    url: $('#updateStatusForm').attr('action'),
-                    type: 'POST',
-                    data: $('#updateStatusForm').serialize(),
-                    success: function (response) {
-                        $('#statusMessage').text('');
-                        if (response.success) {
-                            $('#statusMessage').text(response.message).css('color', 'green');
-                            $('#status-display').text(response.newStatus);
-
-                            switch (response.newStatus) {
-                                case 'Canceled':
-                                    $('#status-display').text(response.newStatus).css('color', '#ff0000');
-                                    break;
-                                case 'Scheduled':
-                                    $('#status-display').text(response.newStatus).css('color', '#ff9900');
-                                    break;
-                                case 'Confirmed':
-                                    $('#status-display').text(response.newStatus).css('color', '#28a745');
-                                    break;
-                                default:
-                                    break;
-                            }
-
-
-                        } else {
-                            $('#statusMessage').text(response.message).addClass('text-danger');
-                        }
-                    },
-                    error: function () {
-                        $('#statusMessage').text('An error occurred. Please try again.').addClass('text-danger');
-                    }
-                });
-            });
-        });
-    </script>
-}
+</div>

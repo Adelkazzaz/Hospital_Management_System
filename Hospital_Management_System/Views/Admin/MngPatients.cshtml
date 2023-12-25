@@ -1,0 +1,45 @@
+﻿@model List<Hospital_Management_System.ViewModel.DoctorPatient>
+@{
+    Layout = "_ALayout";
+    ViewData["Title"] = "MngPatient";
+}
+
+<div class="table-data">
+    <div class="order">
+        <div class="head">
+            <h3>Patients</h3>
+            <i class="bx bx-search"></i>
+            <i class="bx bx-filter"></i>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Doctor</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+             @foreach(var i in Model)
+                {
+                    <tr>
+                        <td>
+                         
+                            <p>@i.FullName</p>
+                        </td>
+                        <td>@i.Gender</td>
+                        <td>@i.BDate</td>
+                        <td>@i.Phone</td>
+                        <td>@i.Email</td>
+                        <td>@i.FullNameDoctor</td>
+                        <td><span class="status bg-danger">Remove</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

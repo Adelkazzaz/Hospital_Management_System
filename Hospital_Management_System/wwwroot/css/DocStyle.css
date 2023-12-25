@@ -28,16 +28,15 @@ body {
   width: 100%;
 }
 
-
 /* =============== Navigation ================ */
 .navigation {
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background: var(--blue);
-    border-left: 10px solid var(--blue);
-    transition: 0.5s;
-    overflow: hidden;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
 }
 .navigation.active {
   width: 80px;
@@ -77,11 +76,10 @@ body {
         color: var(--white);
         cursor: pointer;
     }
-    .navigation ul li:hover a,
-    .navigation ul li.hovered a {
-        color: var(--blue);
-        cursor: pointer;
-    }
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
 
 .navigation ul li a .icon {
   position: relative;
@@ -205,17 +203,8 @@ body {
 }
 
 .status-confirmed {
-    color: #28a745;
+    color: #28a745; /* Green color for confirmed status */
 }
-
-.status-scheduled {
-    color: #ff9900;
-}
-
-.status-canceled {
-    color: #ff0000;
-}
-
 
 .content-card {
     background: var(--black);
@@ -251,7 +240,6 @@ body {
 }
 
 .cardBox .card {
-  width:50%;
   position: relative;
   background: var(--white);
   padding: 30px;
@@ -448,10 +436,6 @@ button {
     border-radius: 65px;
     cursor: pointer;
 }
-
-.text-danger {
-    color: red;
-}
 /* ====================== Forms ========================== */
 
 /* ====================== Responsive Design ========================== */
@@ -516,4 +500,3 @@ button {
     left: initial;
   }
 }
-

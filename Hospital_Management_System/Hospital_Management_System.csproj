@@ -22,4 +22,11 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Doctor\AddMedicalRecord.cshtml" />
+    <None Include="Views\Doctor\CreateAppointment.cshtml" />
+    <None Include="Views\Doctor\DisplayAppointment.cshtml" />
+    <None Include="Views\Doctor\_Doctor.cshtml" />
+  </ItemGroup>
+
 </Project>

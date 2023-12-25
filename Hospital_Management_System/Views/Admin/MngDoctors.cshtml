@@ -1,0 +1,54 @@
+﻿@model List<Hospital_Management_System.ViewModel.StaffViewModel>
+@{
+    Layout = "_ALayout";
+}
+<!-- Display the data in the table -->
+	<div class="table-data">
+		<div class="order">
+			<div class="head">
+				<h3>Doctors </h3>
+				
+				<button type="button" class="btn btn-outline-primary">Add Doctor</button>
+
+			
+				<i class='bx bx-search' ></i>
+				<i class='bx bx-filter' ></i>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Full Name</th>
+						<th>Specialization</th>
+						<th>Phone</th>
+						<th>Email</th>
+						<th>Salary</th>
+						<th>Action</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					@foreach(var i in Model)
+				{
+					<tr>
+						<td>
+							
+							<p>@i.FullName</p>
+						</td>
+						<td>@i.Specialization</td>
+						<td>@i.Phone</td>
+						<td>@i.Email</td>
+						<td>@i.Salary</td>
+						<td>
+							<span class="status bg-danger">Remove</span>
+							<!-- <div class="alert alert-danger" role="alert">
+							A simple danger Mohammed!
+							</div> -->
+
+						</td>
+					</tr>
+				}
+			</tbody>
+			</table>
+
+		</div>
+		
