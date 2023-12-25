@@ -155,6 +155,7 @@ E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\Real
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
+<<<<<<< HEAD
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.json
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.staticwebassets.runtime.json
@@ -394,3 +395,5 @@ C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_Sys
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+=======
+>>>>>>> 46d1065ebb7fc59b1722981a365b98b9696d2ac0

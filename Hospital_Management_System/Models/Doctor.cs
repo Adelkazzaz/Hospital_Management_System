@@ -8,7 +8,7 @@ namespace demo.Models
 		[Key, ForeignKey("Staff")]
 		public int Id { get; set; }
 		public string Specialization { get; set; }
-		public string Qualifications { get; set; }
+		
 
 		public virtual Staff Staff { get; set; }
 		public virtual ICollection<MedicalRecord> MedicalRecords { get; set; }
