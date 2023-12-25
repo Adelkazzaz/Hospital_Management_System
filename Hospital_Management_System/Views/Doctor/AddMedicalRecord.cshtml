@@ -15,25 +15,27 @@
         <form asp-controller="Doctor" asp-action="AddMedicalRecord" class="form-section" method="post">
         <h1>Enter Record Details</h1>
 
-        <label asp-for="Patient_id">Patient ID:</label>
+
+            <label asp-for="Patient_id">Patient ID:</label>
             <input asp-for="Patient_id" required>
+            <span asp-validation-for="Patient_id" class="text-danger"></span>
 
-        <label asp-for="Diagnosis">Diagnosis:</label>
-            <input asp-for="Diagnosis" required>
+            <label asp-for="Diagnosis">Diagnosis:</label>
+            <input asp-for="Diagnosis" >
+            <span asp-validation-for="Diagnosis" class="text-danger"></span>
 
-        <label asp-for="Treatment">Treatment:</label>
-            <input asp-for="Treatment"  required>
+            <label asp-for="Treatment">Treatment:</label>
+            <input asp-for="Treatment"  >
+            <span asp-validation-for="Treatment" class="text-danger"></span>
 
-        <label asp-for="StartDate">Start Date:</label>
-            <input asp-for="StartDate" type="date"  style="color:var(--dark);" required>
+            <label asp-for="StartDate">Start Date:</label>
+            <input asp-for="StartDate" type="date">
+            <span asp-validation-for="StartDate" class="text-danger"></span>
 
-        <label asp-for="EndDate">End Date:</label>
-            <input asp-for="EndDate" type="date" style="color:var(--dark);" required>
-
-        <label asp-for="Doctor_id">Doctor ID:</label>
+            <label asp-for="Doctor_id">Doctor ID:</label>
             <input asp-for="Doctor_id" required>
 
-        <button type="submit">Submit</button>
+        <button type="submit" >Submit</button>
     </form>
 </div>
 </div>

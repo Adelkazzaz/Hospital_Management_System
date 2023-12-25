@@ -16,21 +16,19 @@
             <h1>Enter Appointment Details</h1>
 
             <label asp-for="Patient_id">Patient ID:</label>
-            <input asp-for="Patient_id" required>
+            <input asp-for="Patient_id">
+            <span asp-validation-for="Patient_id" class="text-danger"></span>
 
 
-            <label asp-for="Date">Appointment Date:</label>
-            <input asp-for="Date" required>
+            <label asp-for="Date" >Appointment Date:</label>
+            <input asp-for="Date">
+            <span asp-validation-for="Date" class="text-danger"></span>
 
-            <label asp-for="Status">Status:</label>
-            <select asp-for="Status" required>
-                <option value="Scheduled">Scheduled</option>
-                <option value="Confirmed">Confirmed</option>
-                <option value="Canceled">Canceled</option>
-            </select>
+            <input type="hidden" asp-for="Status" value="Scheduled">
 
             <label asp-for="Doctor_id">Doctor ID:</label>
-            <input asp-for="Doctor_id" required>
+            <input asp-for="Doctor_id">
+            <span asp-validation-for="Doctor_id" class="text-danger"></span>
 
             <button type="submit">Submit</button>
         </form>
