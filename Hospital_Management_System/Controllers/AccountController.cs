@@ -1,16 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hospital_Management_System.Models;
+using Hospital_Management_System.ViewModel;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Hospital_Management_System.Controllers
 {
     public class AccountController : Controller
     {
-        // Action to Login page
         public IActionResult Login()
         {
             return View();
         }
-
-        // Action to redirect to the register page
         public IActionResult Register()
         {
             return View();

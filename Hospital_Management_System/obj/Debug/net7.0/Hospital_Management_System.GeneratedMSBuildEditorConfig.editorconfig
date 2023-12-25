@@ -18,14 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/AdelKazzaz/Workspace/Hospital_Management_System/Hospital_Management_System/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/AdelKazzaz/Workspace/Hospital_Management_System/Hospital_Management_System/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/AdelKazzaz/Workspace/Hospital_Management_System/Hospital_Management_System/Views/Admin/MngDoctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW5nRG9jdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

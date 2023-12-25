@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hospital_Management_System.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace demo.Models
 {
 	public class HMSEntites : DbContext
-	{
+    {
 		public HMSEntites() : base()
 		{
 		}

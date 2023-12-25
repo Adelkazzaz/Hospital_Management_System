@@ -1,5 +1,6 @@
 ﻿using demo.Models;
 using Hospital_Management_System.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
@@ -7,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Hospital_Management_System.Controllers
 {
-	public class DoctorController : Controller
+    public class DoctorController : Controller
     {
         HMSEntites context = new HMSEntites();
         

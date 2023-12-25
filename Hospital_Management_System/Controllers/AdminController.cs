@@ -1,12 +1,13 @@
 ﻿using demo.Models;
 using Hospital_Management_System.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
 namespace Hospital_Management_System.Controllers
 {
-	public class AdminController : Controller
+    public class AdminController : Controller
 	{
 		HMSEntites context = new HMSEntites();
 		public ActionResult MngDoctors()
