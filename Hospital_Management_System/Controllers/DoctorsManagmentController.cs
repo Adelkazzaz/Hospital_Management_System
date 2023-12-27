@@ -4,6 +4,7 @@ using Hospital_Management_System.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using System.Data;
@@ -50,28 +51,28 @@ namespace Hospital_Management_System.Controllers
         {
 
             var data =
-          from s in _context.Staffs
-          join d in _context.Doctors
-          on s.ID equals id
-          join dept in _context.Departments
-          on s.dept_id equals dept.Id
+                  from s in _context.Staffs
+                  join d in _context.Doctors
+                  on s.ID equals id
+                  join dept in _context.Departments
+                  on s.dept_id equals dept.Id
                   where d.Id == id
-          select new StaffDetailsVM
-          {
-              Id = id,
-              FullName = s.FullName,
-              Gender = s.Gender,
-              BDate = s.BDate,
-              Phone = s.Phone,
-              Role = s.Role,
-              Email = s.Email,
-              Specialization = d.Specialization,
-              DepartmentName = dept.Name,
-              Qualifications = s.Qualifications,
-              Governorate = s.Governorate,
-              City = s.City
-          };
-            return View("DoctorDetails", data.ToList().FirstOrDefault());
+                  select new StaffDetailsVM
+                  {
+                      Id = id,
+                      FullName = s.FullName,
+                      Gender = s.Gender,
+                      BDate = s.BDate,
+                      Phone = s.Phone,
+                      Role = s.Role,
+                      Email = s.Email,
+                      Specialization = d.Specialization,
+                      DepartmentName = dept.Name,
+                      Qualifications = s.Qualifications,
+                      Governorate = s.Governorate,
+                      City = s.City
+                  };
+                    return View("DoctorDetails", data.ToList().FirstOrDefault());
         }
         public IActionResult AddDoctor()
         {
@@ -85,7 +86,8 @@ namespace Hospital_Management_System.Controllers
         [HttpPost]
         public IActionResult SaveDoctor(AddDoctorVM model)
         {
-            if (!ModelState.IsValid)
+
+			if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddDoctor");
             }
@@ -114,6 +116,8 @@ namespace Hospital_Management_System.Controllers
                 Specialization = model.Specialization,
                 Staff = staff
             };
+
+
 
             try
             {
@@ -249,5 +253,5 @@ namespace Hospital_Management_System.Controllers
 
 
 
-    }
+	}
 }
