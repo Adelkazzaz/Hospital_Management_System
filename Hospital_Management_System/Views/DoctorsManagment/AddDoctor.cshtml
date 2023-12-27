@@ -1,0 +1,155 @@
+﻿@model AddDoctorVM
+
+@{
+    Layout = null; // or Layout = "";
+
+
+    SelectList listItems = new SelectList(ViewBag.departments, "Id", "Name");
+
+}
+
+
+<head>
+    <title>Add Doctor </title>
+    <link rel="stylesheet" href="/css/doc-register-style.css" />
+    @* <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css *@" 
+</head>
+<body>
+    <section class="container">
+        <header>Add Doctor Form</header>
+        <form asp-controller="DoctorsManagment" asp-action="SaveDoctor" method="post" class="form">
+            <!----------------------------------------------------------------------------------------------------->
+
+            <div class="input-box ">
+                <div class="column">
+                    <div class="col">
+                        <label asp-for="FullName">Full Name</label>
+                        <input class="form-control" asp-for="FullName" placeholder="Enter Your Full Name" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+
+                    </div>
+                    <div class="col">
+                        <label asp-for="Specialization">Specialization</label>
+                        <input class="form-control" asp-for="Specialization" placeholder="Enter The Specialization" />
+                        <span asp-validation-for="Specialization" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box ">
+                <div class="column">
+                    <div class="col">
+                        <label asp-for="Qualifications">Degree &#160;</label>
+                        <input class="form-control" asp-for="Qualifications" placeholder="Qualifications" />
+                        <span asp-validation-for="Qualifications" class="text-danger"></span>
+
+                    </div>
+                    <div class="col">
+                        <label asp-for="Role">Job Title</label>
+                        <input class="form-control" asp-for="Role" placeholder="Enter The Job Title" />
+                        <span asp-validation-for="Role" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="input-box ">
+                <div class="column">
+                    <div class="col">
+                        <label asp-for="Email">Doctor Email</label>
+                        <input class="form-control" asp-for="Email" placeholder="Enter Doctor Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
+                    </div>
+                    <div class="col">
+                        <label asp-for="Salary">Doctor Salary</label>
+                        <input class="form-control" asp-for="Salary" placeholder="Enter Doctor Salary " />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------->
+
+            <div class="column">
+                <div class="input-box PhoneNumber">
+                    <label asp-for="Phone">Phone Number</label>
+                    <input class="form-control" asp-for="Phone" placeholder="Enter Doctor Phone">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+
+                </div>
+                <div class="input-box BirthDate">
+                    <label asp-for="BDate">Doctor Birth Date</label>
+                    <input type="date" class="form-control" asp-for="BDate" placeholder="Enter Doctor Birth Date " />
+                    <span asp-validation-for="BDate" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="column">
+                <div class="input-box PhoneNumber">
+                    <label asp-for="Governorate">Enter Governorate</label>
+                    <input class="form-control" asp-for="Governorate" placeholder="Enter Governorate" />
+                    <span asp-validation-for="Governorate" class="text-danger"></span>
+
+                </div>
+                <div class="input-box PhoneNumber">
+                    <label asp-for="City">Enter City</label>
+                    <input class="form-control" asp-for="City" placeholder="Enter City" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+
+
+                </div>
+            </div>
+            </div>
+
+            <div class="input-box address">
+                <label asp-for="DeptId">Department</label>
+                <div class="column">
+                    <div class="country-select-box select-box">
+                        <select class="form-control" asp-for="DeptId" asp-items="@listItems" ></select>
+                        <span asp-validation-for="DeptId" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="input-box address ">
+                <label asp-for="Password">Enter Password</label>
+                <div class="column">
+                    <input class="form-control" asp-for="Password" placeholder="Enter Password" />
+              
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input class="form-check-input" type="radio" asp-for="Gender" value="Male" />
+                        <label asp-for="Gender" class="control-label">Male</label>
+
+                    </div>
+                    <div class="gender">
+                        <input class="form-check-input" type="radio" asp-for="Gender" value="Female" />
+                        <label asp-for="Gender" class="control-label">Female</label>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+            <button>Save</button>
+        </form>
+    </section>
+</body>
+<style>
+    span {
+        color: red;
+    }
+</style>
+
+
+@* <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

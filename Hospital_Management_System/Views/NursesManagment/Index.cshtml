@@ -1,0 +1,38 @@
+﻿@using Hospital_Management_System.ViewModel;
+@model List<StaffVM>
+@{
+	Layout = "_Alayout";
+}
+
+
+<link rel="stylesheet" href="/css/style.css" />
+<div class="table-data">
+	<div class="order">
+		<div class="head">
+			<h3>Nurses</h3>
+
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Nurse Full Name</th>
+					<th>Department</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var nurse in Model)
+				{
+					<tr>
+						<td>
+							<img src="https://cdn-icons-png.flaticon.com/512/3774/3774293.png">
+							<p>@nurse.Name</p>
+						</td>
+						<td>@nurse.DeptName</td>
+						<td><a asp-action="NurseDetails" asp-controller="NursesManagment" asp-route-id="@nurse.Id" class="btn btn-info">Details</a> </td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

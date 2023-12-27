@@ -1,0 +1,78 @@
+﻿@model Hospital_Management_System.ViewModel.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="signin-container">
+    <div class="forms-container">
+        <div class="signin">
+            <form asp-action="Login" class="form sign-in-form" id="form">
+                <h2 class="title">Sign in</h2>
+                <div class="form__field">
+                    <label asp-for="UserName" class="form__label">UserName</label>
+
+                    <input asp-for="UserName"
+                           placeholder="Write your UserName"
+                           required
+                           id="userName"
+                           class="form__input" />
+
+                    <i class="ri-mail-line form__icon"></i>
+
+                </div>
+                <div class="form__field">
+                    <label asp-for="Password" class="form__label">Password</label>
+                    <input asp-for="Password"
+                           placeholder="Write your Password"
+                           required
+                           id="Password"
+                           class="form__input" />
+
+                    <i class="ri-lock-2-line form__icon"></i>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                    </label>
+                </div>
+
+                <input type="submit" value="Login" class="btn solid" />
+                <p class="social-text">Or social platforms</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New here ?</h3>
+                <p>
+                    If this is your first time coming here, go to register here.
+                    Please note that registration is for the patient only
+                </p>
+                <a asp-action="Index">Register</a>
+            </div>
+            <img src="~/image/log.svg" class="image" alt="" />
+        </div>
+    </div>
+</div>
+<script src="~/js/sign-in-app.js"></script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

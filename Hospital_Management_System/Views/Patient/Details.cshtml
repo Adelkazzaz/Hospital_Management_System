@@ -1,0 +1,39 @@
+﻿@using demo.Models
+@model Patient
+@{
+    Layout = "_Patient";
+
+    ViewData["Title"] = "Patient";
+}
+
+<div class="details">
+
+        <!-- ================ Patient Details ================= -->
+        <div class="content-section">
+            <h2>Patient Details</h2>
+            <div class="details-item">
+                <label>Patient ID:</label>
+                <span class="detail-value">@Model.ID</span>
+            </div>
+            <div class="details-item">
+                <label>Name:</label>
+                <span class="detail-value">@Model.FullName</span>
+            </div>
+            <div class="details-item">
+                <label>Phone Number:</label>
+            <span class="detail-value">@Model.Phone</span>
+            </div>
+            <div class="details-item">
+                <label>Age:</label>
+                <span class="detail-value">@Model.BDate</span>
+            </div>
+            <div class="details-item">
+                <label>Gender:</label>
+                <span class="detail-value">@Model.Gender</span>
+            </div>
+            <div class="details-item">
+                <label>Blood Type:</label>
+                <span class="detail-value">@Model.Blood_Type</span>
+            </div>
+        </div>
+</div>

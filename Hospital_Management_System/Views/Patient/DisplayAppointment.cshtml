@@ -1,0 +1,48 @@
+﻿@using Hospital_Management_System.ViewModel;
+@using demo.Models
+@model List<Appointment>
+@{
+	Layout = "_Patient";
+}
+
+<div class="details">
+	<div class="recentOrders">
+		<div class="cardHeader">
+			<h2>Appointments</h2>
+			<i class='bx bx-search'></i>
+			<i class='bx bx-filter'></i>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					
+					<th>Status</th>
+					<th>Date</th>
+					<th>Time</th>
+					
+					<th>Appointment ID</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var a in Model)
+				{
+					<tr>
+					
+						<td>@a.Status</td>
+						<td>@a.Date.ToString("yyyy-MM-dd")</td>
+						<td>@a.Date.ToShortTimeString()</td>
+						
+						<td>@a.Id</td>
+						<td class="button-cell">
+			<a asp-action="AppointementDetail" asp-controller="Patient" asp-route-_appointmetid="@a.Id" asp-route-patientid="@a.Patient_id" class="button">
+    Details
+</a>
+
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	</div>
+</div>
