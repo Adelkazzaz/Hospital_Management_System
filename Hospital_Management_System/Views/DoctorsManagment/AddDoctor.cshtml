@@ -19,6 +19,8 @@
         <header>Add Doctor Form</header>
         <form asp-controller="DoctorsManagment" asp-action="SaveDoctor" method="post" class="form">
             <!----------------------------------------------------------------------------------------------------->
+            <input type="hidden" asp-for="Shift" value="Day" />
+            <input type="hidden" asp-for="Country" value="Egypt" />
 
             <div class="input-box ">
                 <div class="column">

@@ -23,7 +23,7 @@ namespace demo.Models
 		public DbSet<MedicalRecord> MedicalRecords { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			var connectionString = "server=localhost;user=root;password=root;database=HMS-DB";
+			var connectionString = "server=hms-db-hms-db.a.aivencloud.com;port=11793;user=avnadmin;password=AVNS_FZs-lAOyU4XtmPIr-FH;database=hms-db-new";
 			var serverVersion = new MySqlServerVersion(new Version(8, 0, 35));
 			optionsBuilder.UseMySql(connectionString, serverVersion);
 		}

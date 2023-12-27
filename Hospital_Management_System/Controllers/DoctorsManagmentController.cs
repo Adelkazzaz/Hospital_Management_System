@@ -4,6 +4,7 @@ using Hospital_Management_System.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using System.Data;
@@ -50,27 +51,28 @@ namespace Hospital_Management_System.Controllers
         {
 
             var data =
-          from s in _context.Staffs
-          join d in _context.Doctors
-          on s.ID equals id
-          join dept in _context.Departments
-          on s.dept_id equals dept.Id
-          select new StaffDetailsVM
-          {
-              Id = id,
-              FullName = s.FullName,
-              Gender = s.Gender,
-              BDate = s.BDate,
-              Phone = s.Phone,
-              Role = s.Role,
-              Email = s.Email,
-              Specialization = d.Specialization,
-              DepartmentName = dept.Name,
-              Qualifications = s.Qualifications,
-              Governorate = s.Governorate,
-              City = s.City
-          };
-            return View("DoctorDetails", data.ToList().FirstOrDefault());
+                  from s in _context.Staffs
+                  join d in _context.Doctors
+                  on s.ID equals id
+                  join dept in _context.Departments
+                  on s.dept_id equals dept.Id
+                  where d.Id == id
+                  select new StaffDetailsVM
+                  {
+                      Id = id,
+                      FullName = s.FullName,
+                      Gender = s.Gender,
+                      BDate = s.BDate,
+                      Phone = s.Phone,
+                      Role = s.Role,
+                      Email = s.Email,
+                      Specialization = d.Specialization,
+                      DepartmentName = dept.Name,
+                      Qualifications = s.Qualifications,
+                      Governorate = s.Governorate,
+                      City = s.City
+                  };
+                    return View("DoctorDetails", data.ToList().FirstOrDefault());
         }
         public IActionResult AddDoctor()
         {
@@ -84,7 +86,8 @@ namespace Hospital_Management_System.Controllers
         [HttpPost]
         public IActionResult SaveDoctor(AddDoctorVM model)
         {
-            if (!ModelState.IsValid)
+
+			if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddDoctor");
             }
@@ -104,8 +107,8 @@ namespace Hospital_Management_System.Controllers
                 hospital_id = 1,
                 Governorate = model.Governorate,
                 City = model.City,
-                Country ="Egypt",
-                Shift="Day"
+                Country = model.Country,
+                Shift= model.Shift
             };
 
             var doctor = new Doctor
@@ -113,6 +116,8 @@ namespace Hospital_Management_System.Controllers
                 Specialization = model.Specialization,
                 Staff = staff
             };
+
+
 
             try
             {
@@ -159,82 +164,94 @@ namespace Hospital_Management_System.Controllers
 
 
 
-        //frist look with edit
+		public IActionResult EditDoctor(int id)
+		{
+			var doctor = _context.Doctors
+								.Include(d => d.Staff)
+								.Include(d => d.Staff.Department)
+								.FirstOrDefault(d => d.Id == id);
 
-        //[HttpGet]
-        //public ActionResult Edit(int id)
-        //{
-        //    ViewBag.dept = _context.Departments.ToList();
+			if (doctor == null)
+			{
+				ViewBag.ErrorMessage = "Doctor not found.";
+				return View("Error");
+			}
+
+			var editDoctorVM = new EditDoctorVM
+			{
+				Id = doctor.Id,
+				FullName = doctor.Staff.FullName,
+				Gender = doctor.Staff.Gender,
+				BDate = doctor.Staff.BDate,
+				Phone = doctor.Staff.Phone,
+				Email = doctor.Staff.Email,
+				Password = doctor.Staff.Password,
+				Salary = doctor.Staff.Salary,
+				Role = doctor.Staff.Role,
+				Qualifications = doctor.Staff.Qualifications,
+				DeptId = doctor.Staff.dept_id,
+				Governorate = doctor.Staff.Governorate,
+				City = doctor.Staff.City,
+				Specialization = doctor.Specialization,
+				Shift = doctor.Staff.Shift,
+				Country = doctor.Staff.Country
+			};
+
+			ViewBag.Departments = _context.Departments.ToList();
+
+			return View("EditDoctor", editDoctorVM);
+		}
+
+		[HttpPost]
+		public IActionResult EditDoctor(int id, EditDoctorVM editedDoctor)
+		{
+
+			if (!ModelState.IsValid)
+			{
+				return RedirectToAction("AddDoctor");
+			}
+
+			var existingDoctor = _context.Doctors
+										.Include(d => d.Staff)
+										.FirstOrDefault(d => d.Id == id);
+
+			if (existingDoctor == null)
+			{
+				ViewBag.ErrorMessage = "Doctor not found.";
+				return View("Error");
+			}
+
+			existingDoctor.Staff.FullName = editedDoctor.FullName;
+			existingDoctor.Staff.Gender = editedDoctor.Gender;
+			existingDoctor.Staff.BDate = editedDoctor.BDate;
+			existingDoctor.Staff.Phone = editedDoctor.Phone;
+			existingDoctor.Staff.Email = editedDoctor.Email;
+			existingDoctor.Staff.Password = editedDoctor.Password;
+			existingDoctor.Staff.Salary = editedDoctor.Salary;
+			existingDoctor.Staff.Role = editedDoctor.Role;
+			existingDoctor.Staff.Qualifications = editedDoctor.Qualifications;
+			existingDoctor.Staff.dept_id = editedDoctor.DeptId;
+			existingDoctor.Staff.Governorate = editedDoctor.Governorate;
+			existingDoctor.Staff.City = editedDoctor.City;
+			existingDoctor.Specialization = editedDoctor.Specialization;
+			existingDoctor.Staff.Shift = editedDoctor.Shift;
+			existingDoctor.Staff.Country = editedDoctor.Country;
+
+			try
+			{
+				_context.SaveChanges();
+			}
+			catch (Exception)
+			{
+				ModelState.AddModelError(string.Empty, "An error occurred while saving the data.");
+				ViewBag.Departments = _context.Departments.ToList();
+				return View("EditDoctor", editedDoctor);
+			}
+
+			return RedirectToAction("Index");
+		}
 
 
-        //    var data =
-        //  from s in _context.Staffs
-        //  join d in _context.Doctors
-        //  on s.ID equals id
-        //  join dept in _context.Departments
-        //  on s.dept_id equals dept.Id
-        //  select new StaffDetailsVM
-        //  {
-        //      Id = id,
-        //      FullName = s.FullName,
-        //      Gender = s.Gender,
-        //      BDate = s.BDate,
-        //      Phone = s.Phone,
-        //      Role = s.Role,
-        //      Email = s.Email,
-        //      Specialization = d.Specialization,
-        //      DepartmentName = dept.Name,
-        //      Qualifications = s.Qualifications,
-        //      Governorate = s.Governorate,
-        //      City = s.City,
-        //      Password = s.Password
-        //  };
 
-
-
-        //    return View( data.ToList().FirstOrDefault());
-        //}
-
-        //[HttpPost]
-        //public ActionResult SaveEdit(int id,StaffDetailsVM NewModel) 
-        //{
-
-        //    if(!ModelState.IsValid)
-        //    {
-        //        return View("Index");
-        //    }
-
-
-        //    try
-        //    {
-        //        var doctor = _context.Doctors
-        //            .Include(d => d.Staff)
-        //            .FirstOrDefault(d => d.Id == id);
-        //        var department = _context.Departments.FirstOrDefault(d => d.Id == id);
-        //        doctor.Staff.FullName = NewModel.FullName;
-        //        doctor.Staff.Gender = NewModel.Gender;
-        //        doctor.Staff.BDate = NewModel.BDate;
-        //        doctor.Staff.Phone = NewModel.Phone;
-        //        doctor.Staff.Role = NewModel.Role;
-        //        doctor.Staff.Email = NewModel.Email;
-        //        doctor.Specialization = NewModel.Specialization;
-        //        doctor.Staff.Qualifications = NewModel.Qualifications;
-        //        doctor.Staff.Governorate = NewModel.Governorate;
-        //        doctor.Staff.City = NewModel.City;
-        //        doctor.Staff.Password = NewModel.Password;
-        //        department.Name = NewModel.DepartmentName;
-        //        _context.SaveChanges();
-        //    } catch (Exception ex)
-        //    {
-        //        ViewBag.Error=ex.Message;
-        //    }
-
-
-        //    return RedirectToAction("DoctorDetails", new { DoctorId = id });
-
-
-        //}
-
-
-    }
+	}
 }
