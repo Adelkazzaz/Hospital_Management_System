@@ -1,0 +1,37 @@
+﻿@using demo.Models
+@model Appointment
+@{
+	Layout = "_Doctor";
+}
+
+
+    
+<div class="details">
+    <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Creat New Appointment</h2>
+            </div>
+
+        <form class="form-section" asp-controller="Doctor" asp-action="CreateAppointment" method="post">
+            <h1>Enter Appointment Details</h1>
+
+            <label asp-for="Patient_id">Patient ID:</label>
+            <input asp-for="Patient_id">
+            <span asp-validation-for="Patient_id" class="text-danger"></span>
+
+
+            <label asp-for="Date" >Appointment Date:</label>
+            <input asp-for="Date">
+            <span asp-validation-for="Date" class="text-danger"></span>
+
+            <input type="hidden" asp-for="Status" value="Scheduled">
+
+            <label asp-for="Doctor_id">Doctor ID:</label>
+            <input asp-for="Doctor_id">
+            <span asp-validation-for="Doctor_id" class="text-danger"></span>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</div>

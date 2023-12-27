@@ -1,0 +1,178 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->
+     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<title>HMS</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">HMS</span>
+		</a>
+		<ul class="side-menu top" style="padding:0px">
+			<li >
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li >
+				<a href="/DoctorsManagment/Index" >
+					<i class='bx' >
+						<i class="fas fa-user-md"></i>
+					</i>
+					<span class="text">Doctor</span>
+				</a>
+			</li>
+			<li>
+				<a href ="/NursesManagment/Index" >
+					<i class='bx ' >
+						<i class="fas fa-user-nurse"></i>
+					</i>
+					<span class="text">Nurses</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Roles/New">
+					<i class='bx '>
+						<i class="fas add-user"></i>
+					</i>
+					<span class="text">Add Role</span>
+				</a>
+			</li>
+
+		</ul>
+		<ul class="side-menu">
+
+			<li>
+				<a href="#" class="logout" style="transform: translate(-2vw,20vh);">
+					<i class='bx' >
+						<i class="fa-solid fa-right-to-bracket"></i>
+					</i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<ul class="box-info p-0" >
+				<li>
+					<i class='bx '>
+						<i class="fa-solid fa-hospital"></i>
+					</i>
+					<span class="text">
+						<h3>@ViewBag.DepartmentCount</h3>
+						<p>Departments</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx'>
+						<i class="fas fa-user-md"></i>
+					</i>
+					<span class="text">
+						<h3>@ViewBag.DoctorCount</h3>
+						<p>Doctors</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx '>
+						<i class="fas fa-user-nurse"></i>
+					</i>
+					<span class="text">
+						<h3>@ViewBag.NurseCount</h3>
+						<p>Nurses</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx '>
+						<i class="fa-solid fa-hospital-user"></i>
+					</i>
+
+					<span class="text">
+						<h3>@ViewBag.PatientCount</h3>
+						<p> Patients</p>
+					</span>
+				</li>
+			</ul>
+			<!--table for doctor-->
+			<div>
+				@RenderBody()
+			</div>
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  
+    <link rel="stylesheet" href="/lib/bootstrap/dist/js/bootstrap.js">
+ 
+	<script src="/js/script.js"></script>
+</body>
+</html>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var currentUrl = window.location.pathname;
+		var menuLinks = document.querySelectorAll('#sidebar ul.side-menu a');
+
+		menuLinks.forEach(function (link) {
+			var linkUrl = link.getAttribute('href');
+			if (currentUrl.endsWith(linkUrl)) {
+				link.parentNode.classList.add('active');
+			}
+		});
+	});
+</script>
+<style>
+	#sidebar ul.side-menu li.active {
+		color: blue;
+	}
+
+</style>
