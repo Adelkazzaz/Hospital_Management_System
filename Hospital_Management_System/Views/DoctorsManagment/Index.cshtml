@@ -1,11 +1,10 @@
 ﻿@using Hospital_Management_System.ViewModel;
 @model List<StaffVM>
 @{
-	Layout = "_Alayout";
+	Layout = "_ALayout";
 }
  
-@if (Model.Any())
-{
+
 	<link rel="stylesheet" href="/css/style.css" />
 	<div class="table-data">
 		<div class="order">
@@ -32,10 +31,12 @@
 							</td>
 							<td>@doctor.DeptName</td>
 							<td><a asp-action="DoctorDetails" asp-controller="DoctorsManagment" asp-route-id="@doctor.Id" class="btn btn-info">Details</a> </td>
+							<td><a asp-action="EditDoctor" asp-controller="DoctorsManagment" asp-route-id="@doctor.Id" class="btn btn-primary" >Edit</a> </td>
+
 						</tr>
 					}
 				</tbody>
 			</table>
 		</div>
 	</div>
-}
+
