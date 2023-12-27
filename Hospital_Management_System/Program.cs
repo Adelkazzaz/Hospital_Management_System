@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connectionString = "server=localhost;user=root;password=root;database=HMS-DB";
+var connectionString = "server=hms-db-hms-db.a.aivencloud.com;port=11793;user=avnadmin;password=AVNS_FZs-lAOyU4XtmPIr-FH;database=hms-db-new";
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 35));
 builder.Services.AddDbContext<HMSEntites>(optionBuilder => {
     optionBuilder.UseMySql(connectionString, serverVersion);
