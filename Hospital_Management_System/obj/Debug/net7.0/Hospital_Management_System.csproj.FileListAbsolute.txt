@@ -155,3 +155,50 @@ E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\Real
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
 E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\appsettings.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.staticwebassets.runtime.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.exe
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.deps.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.runtimeconfig.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Hospital_Management_System.pdb
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Humanizer.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.AssemblyReference.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.AssemblyInfoInputs.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.AssemblyInfo.cs
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CoreCompileInputs.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.RazorAssemblyInfo.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.RazorAssemblyInfo.cs
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.sourcelink.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.Hospital_Management_System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.build.Hospital_Management_System.props
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Hospital_Management_System.props
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Hospital_Management_System.props
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\bundle\Hospital_Management_System.styles.css
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\scopedcss\projectbundle\Hospital_Management_System.bundle.scp.css
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.csproj.CopyComplete
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\refint\Hospital_Management_System.dll
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.pdb
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\Hospital_Management_System.genruntimeconfig.cache
+C:\Users\AdelKazzaz\Workspace\Hospital_Management_System\Hospital_Management_System\obj\Debug\net7.0\ref\Hospital_Management_System.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\bin\Debug\net7.0\AngleSharp.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\bin\Debug\net7.0\AngleSharp.Css.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\bin\Debug\net7.0\HtmlSanitizer.dll
+E:\Retardation\collage shit\3rd year\1st term\Visual Programming C#\project\RealHMS\Hospital_Management_System\bin\Debug\net7.0\System.Collections.Immutable.dll

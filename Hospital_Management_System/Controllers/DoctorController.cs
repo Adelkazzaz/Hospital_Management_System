@@ -45,18 +45,16 @@ namespace Hospital_Management_System.Controllers
                 return View(appointment);
             }
 
-            if (context.Patients.Any(p => p.ID != appointment.Patient_id))
+            if (context.Patients.Any(p => p.ID == appointment.Patient_id))
             {
-                ModelState.AddModelError("Patient_id", "This Patient doesn't Exist");
-                return View(appointment);
+                context.Appointments.Add(appointment);
+                context.SaveChanges();
+                return RedirectToAction("DisplayAppointment", new { _docID = appointment.Doctor_id });
             }
+            ModelState.AddModelError("Patient_id", "This Patient doesn't Exist");
 
-            
-            context.Appointments.Add(appointment);
-            context.SaveChanges();
-            
+            return View(appointment);
 
-            return RedirectToAction("DisplayAppointment", new { _docID = appointment.Doctor_id });
         }
 
         //*** Viewing Appointment details with the associated patient  ***//
@@ -108,17 +106,14 @@ namespace Hospital_Management_System.Controllers
         public IActionResult AddMedicalRecord(MedicalRecord _medicalRecord)
         {
 
-            if (context.Patients.Any(p => p.ID != _medicalRecord.Patient_id))
+            if (context.Patients.Any(p => p.ID == _medicalRecord.Patient_id))
             {
-                ModelState.AddModelError("Patient_id", "This Patient doesn't Exist");
-                return View(_medicalRecord);
-            }
-
-            
                 context.MedicalRecords.Add(_medicalRecord);
                 context.SaveChanges();
-                return RedirectToAction("Details", new { _docid = _medicalRecord.Doctor_id, _patientid = _medicalRecord.Patient_id, _appointmentid =  TempData["appointmentID"] });
-          
+                return RedirectToAction("Details", new { _docid = _medicalRecord.Doctor_id, _patientid = _medicalRecord.Patient_id, _appointmentid = TempData["appointmentID"] });
+            }
+            ModelState.AddModelError("Patient_id", "This Patient doesn't Exist");
+            return View(_medicalRecord);
         }
 
 

@@ -53,12 +53,8 @@ namespace Hospital_Management_System.Controllers
               DepartmentName = dept.Name,
               Qualifications = s.Qualifications,
               Governorate = s.Governorate,
-              City = s.City,
-              Password = s.Password
+              City = s.City
           };
-
-            
-
             return View("DoctorDetails", data.ToList().FirstOrDefault());
         }
         public IActionResult AddDoctor()
@@ -78,7 +74,6 @@ namespace Hospital_Management_System.Controllers
                 return RedirectToAction("AddDoctor");
             }
 
-
             var staff = new Staff
             {
                 FullName = model.FullName,
@@ -93,7 +88,9 @@ namespace Hospital_Management_System.Controllers
                 dept_id = model.DeptId,
                 hospital_id = 1,
                 Governorate = model.Governorate,
-                City = model.City
+                City = model.City,
+                Country ="Egypt",
+                Shift="Day"
             };
 
             var doctor = new Doctor
@@ -151,78 +148,79 @@ namespace Hospital_Management_System.Controllers
 
         //frist look with edit
 
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            ViewBag.dept = _context.Departments.ToList();
+        //[HttpGet]
+        //public ActionResult Edit(int id)
+        //{
+        //    ViewBag.dept = _context.Departments.ToList();
 
 
-            var data =
-          from s in _context.Staffs
-          join d in _context.Doctors
-          on s.ID equals id
-          join dept in _context.Departments
-          on s.dept_id equals dept.Id
-          select new StaffDetailsVM
-          {
-              Id = id,
-              FullName = s.FullName,
-              Gender = s.Gender,
-              BDate = s.BDate,
-              Phone = s.Phone,
-              Role = s.Role,
-              Email = s.Email,
-              Specialization = d.Specialization,
-              DepartmentName = dept.Name,
-              Qualifications = s.Qualifications,
-              Governorate = s.Governorate,
-              City = s.City,
-              Password = s.Password
-          };
+        //    var data =
+        //  from s in _context.Staffs
+        //  join d in _context.Doctors
+        //  on s.ID equals id
+        //  join dept in _context.Departments
+        //  on s.dept_id equals dept.Id
+        //  select new StaffDetailsVM
+        //  {
+        //      Id = id,
+        //      FullName = s.FullName,
+        //      Gender = s.Gender,
+        //      BDate = s.BDate,
+        //      Phone = s.Phone,
+        //      Role = s.Role,
+        //      Email = s.Email,
+        //      Specialization = d.Specialization,
+        //      DepartmentName = dept.Name,
+        //      Qualifications = s.Qualifications,
+        //      Governorate = s.Governorate,
+        //      City = s.City,
+        //      Password = s.Password
+        //  };
 
 
 
-            return View( data.ToList().FirstOrDefault());
-        }
-        [HttpPost]
-        public ActionResult SaveEdit(int id,StaffDetailsVM NewModel) 
-        {
+        //    return View( data.ToList().FirstOrDefault());
+        //}
 
-            if(!ModelState.IsValid)
-            {
-                return View("Index");
-            }
+        //[HttpPost]
+        //public ActionResult SaveEdit(int id,StaffDetailsVM NewModel) 
+        //{
 
-
-            try
-            {
-                var doctor = _context.Doctors
-                    .Include(d => d.Staff)
-                    .FirstOrDefault(d => d.Id == id);
-                var department = _context.Departments.FirstOrDefault(d => d.Id == id);
-                doctor.Staff.FullName = NewModel.FullName;
-                doctor.Staff.Gender = NewModel.Gender;
-                doctor.Staff.BDate = NewModel.BDate;
-                doctor.Staff.Phone = NewModel.Phone;
-                doctor.Staff.Role = NewModel.Role;
-                doctor.Staff.Email = NewModel.Email;
-                doctor.Specialization = NewModel.Specialization;
-                doctor.Staff.Qualifications = NewModel.Qualifications;
-                doctor.Staff.Governorate = NewModel.Governorate;
-                doctor.Staff.City = NewModel.City;
-                doctor.Staff.Password = NewModel.Password;
-                department.Name = NewModel.DepartmentName;
-                _context.SaveChanges();
-            } catch (Exception ex)
-            {
-                ViewBag.Error=ex.Message;
-            }
+        //    if(!ModelState.IsValid)
+        //    {
+        //        return View("Index");
+        //    }
 
 
-            return RedirectToAction("DoctorDetails", new { DoctorId = id });
+        //    try
+        //    {
+        //        var doctor = _context.Doctors
+        //            .Include(d => d.Staff)
+        //            .FirstOrDefault(d => d.Id == id);
+        //        var department = _context.Departments.FirstOrDefault(d => d.Id == id);
+        //        doctor.Staff.FullName = NewModel.FullName;
+        //        doctor.Staff.Gender = NewModel.Gender;
+        //        doctor.Staff.BDate = NewModel.BDate;
+        //        doctor.Staff.Phone = NewModel.Phone;
+        //        doctor.Staff.Role = NewModel.Role;
+        //        doctor.Staff.Email = NewModel.Email;
+        //        doctor.Specialization = NewModel.Specialization;
+        //        doctor.Staff.Qualifications = NewModel.Qualifications;
+        //        doctor.Staff.Governorate = NewModel.Governorate;
+        //        doctor.Staff.City = NewModel.City;
+        //        doctor.Staff.Password = NewModel.Password;
+        //        department.Name = NewModel.DepartmentName;
+        //        _context.SaveChanges();
+        //    } catch (Exception ex)
+        //    {
+        //        ViewBag.Error=ex.Message;
+        //    }
 
 
-        }
+        //    return RedirectToAction("DoctorDetails", new { DoctorId = id });
+
+
+        //}
 
 
     }

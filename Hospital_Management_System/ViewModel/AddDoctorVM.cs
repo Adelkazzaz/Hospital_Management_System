@@ -38,9 +38,9 @@ namespace Hospital_Management_System.ViewModel
         [Required]
         [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid Email.")]
         public string Email { get; set; }
+
         [Required]
         [StringLength(maximumLength: 50, MinimumLength = 6, ErrorMessage = "Password must be more than 6 characters.")]
-
         public string Password { get; set; }
         
 
@@ -83,11 +83,12 @@ namespace Hospital_Management_System.ViewModel
             set => _city = new HtmlSanitizer().Sanitize(value);
         }
 
+		public string Shift { get; set; }
+		public string Country { get; set; }
 
 
 
 
 
-
-    }
+	}
 }
