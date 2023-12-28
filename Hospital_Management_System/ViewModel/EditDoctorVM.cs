@@ -37,8 +37,7 @@ namespace Hospital_Management_System.ViewModel
         public string Phone { get; set; }
 
         [Required]
-        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid Email.")]
-        public string Email { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [StringLength(maximumLength: 50, MinimumLength = 6, ErrorMessage = "Password must be more than 6 characters.")]

@@ -20,7 +20,7 @@
 .Reg-container {
     position: relative;
     top: 1rem;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     max-width: 800px;
     width: 100%;
     background: #fff;
@@ -31,7 +31,7 @@
 
 .Reg-header {
     position: relative;
-    top:2rem;
+    top: 2rem;
     font-size: 1.5rem;
     color: #333;
     font-weight: 500;
@@ -51,13 +51,13 @@
         color: #333;
     }
 
-.Reg-form :where(.Reg-input-box input, .Reg-select-box) {
+.Reg-form .Reg-input-box input,
+.Reg-form .Reg-select-box select {
     position: relative;
     height: 50px;
     width: 100%;
     outline: none;
     font-size: 1rem;
-    color: #707070;
     margin-top: 8px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -84,7 +84,8 @@
     margin-bottom: 8px;
 }
 
-.Reg-form :where(.Reg-gender-option, .Reg-gender) {
+.Reg-form .Reg-gender-option,
+.Reg-form .Reg-gender {
     display: flex;
     align-items: center;
     column-gap: 50px;
@@ -99,7 +100,8 @@
     accent-color: #265073;
 }
 
-.Reg-form :where(.Reg-gender input, .Reg-gender label) {
+.Reg-form .Reg-gender input,
+.Reg-form .Reg-gender label {
     cursor: pointer;
 }
 
@@ -107,7 +109,8 @@
     color: #707070;
 }
 
-.Reg-address :where(input, .Reg-select-box) {
+.Reg-address input,
+.Reg-select-box select {
     margin-top: 15px;
 }
 
@@ -143,7 +146,8 @@
         flex-wrap: wrap;
     }
 
-    .Reg-form :where(.Reg-gender-option, .Reg-gender) {
+    .Reg-form .Reg-gender-option,
+    .Reg-form .Reg-gender {
         row-gap: 15px;
     }
 }

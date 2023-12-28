@@ -1,12 +1,13 @@
 ﻿using demo.Models;
 using Ganss.Xss;
-
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace Hospital_Management_System.ViewModel
 {
-    public class AddDoctorVM
+    public class AddDoctorVM:IdentityUser
     {
         private string _specialization;
         private string _qualifications;
@@ -36,12 +37,7 @@ namespace Hospital_Management_System.ViewModel
         public string Phone { get; set; }
 
         [Required]
-        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid Email.")]
-        public string Email { get; set; }
-
-        [Required]
-        [StringLength(maximumLength: 50, MinimumLength = 6, ErrorMessage = "Password must be more than 6 characters.")]
-        public string Password { get; set; }
+        public string UserName { get; set; }
         
 
         [Display(Name = "Department")]

@@ -11,6 +11,7 @@ namespace Hospital_Management_System.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInMAnager;
+        public HMSEntites context = new HMSEntites();
 
         public AccountController
             (UserManager<ApplicationUser> _UserManager,
@@ -39,14 +40,23 @@ namespace Hospital_Management_System.Controllers
                     bool found = await userManager.CheckPasswordAsync(userModel, UserVm.Password);
                     if (found)
                     {
+                        Patient patient = context.Patients.FirstOrDefault(p => p.UserName == userModel.UserName);
+
+                        // Store the patientid in a claim
+                        var claims = new List<Claim>
+                        {
+                            new Claim("patientid", patient?.ID.ToString() ?? string.Empty)
+                        };
+                        await userManager.AddClaimsAsync(userModel, claims);
                         await signInMAnager.SignInAsync(userModel, UserVm.RememberMe);
-                        return RedirectToAction("CreateAppointment", "Patient");
+                        return RedirectToAction("Details", "Patient", new { patientid = patient?.ID });
                     }
                 }
                 ModelState.AddModelError("", "Username and password invalid");
             }
             return View(UserVm);
         }
+
 
         [HttpGet]
         public IActionResult Register()
@@ -57,8 +67,15 @@ namespace Hospital_Management_System.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterUserViewModel newUserVM)
         {
+            Patient patient = new Patient();
             if (ModelState.IsValid)
             {
+                // Check if the username already exists
+                if (await userManager.FindByNameAsync(newUserVM.UserName) != null)
+                {
+                    ModelState.AddModelError("", "Username is already taken.");
+                    return View(newUserVM);
+                }
                 //create account
                 ApplicationUser userModel = new ApplicationUser
                 {
@@ -71,20 +88,31 @@ namespace Hospital_Management_System.Controllers
                     Governorate = newUserVM.Governorate,
                     City = newUserVM.City,
                     UserName = newUserVM.UserName,
-                    PasswordHash = newUserVM.Password 
+                    PasswordHash = userManager.PasswordHasher.HashPassword(null, newUserVM.Password),
                 };
-
-                
-
-
-
+                patient.FullName = newUserVM.FullName;
+                patient.Gender = newUserVM.Gender;
+                patient.Country = newUserVM.Country;
+                patient.Blood_Type = newUserVM.BloodType;
+                patient.Governorate = newUserVM.Governorate;
+                patient.City = newUserVM.City;
+                patient.Password = newUserVM.Password;
+                patient.NurseId = 1;
+                patient.Phone = newUserVM.PhoneNumber;
+                patient.BDate = newUserVM.BDate;
+                patient.ID = GetNextPatientId();
+                patient.UserName = newUserVM.UserName;
                 IdentityResult result = await userManager.CreateAsync(userModel, newUserVM.Password);
                 if (result.Succeeded == true)
                 {
+                    context.Patients.Add(patient);
+                    await context.SaveChangesAsync(); // Use asynchronous SaveChanges
                     await userManager.AddToRoleAsync(userModel, "Patient");
                     //creat cookie
+                    context.Patients.Add(patient);
                     await signInMAnager.SignInAsync(userModel, false);
-                    return RedirectToAction("Details", "Patient");
+          
+                    return RedirectToAction("Details", "Patient", new { patientid = patient.ID });
                 }
                 else
                 {
@@ -96,6 +124,11 @@ namespace Hospital_Management_System.Controllers
 
             }
             return View(newUserVM);
+        }
+        private int GetNextPatientId()
+        {
+           // return max id and increment by 1
+            return context.Patients.Max(p => p.ID) + 1;
         }
         public async Task<IActionResult> Logout()
         {

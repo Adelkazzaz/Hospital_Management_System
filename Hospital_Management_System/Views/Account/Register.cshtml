@@ -8,68 +8,142 @@
     <section class="Reg-container">
         <header class="Reg-header">Registration Form</header>
         <form asp-action="Register" class="Reg-form">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group Reg-input-box">
+                <label asp-for="FullName" class="label"></label>
                 <input asp-for="FullName" class="form-control" />
                 <span asp-validation-for="FullName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group Reg-input-box Reg-select-box">
                 <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
+                <select asp-for="Gender" class="form-control">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group Reg-input-box">
+                <label asp-for="BDate" class="control-label"></label>
+                <input asp-for="BDate" class="form-control" type="date" />
+                <span asp-validation-for="BDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group Reg-input-box Reg-select-box">
                 <label asp-for="BloodType" class="control-label"></label>
-                <input asp-for="BloodType" class="form-control" />
+                <select asp-for="BloodType" class="form-control">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
                 <span asp-validation-for="BloodType" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group Reg-input-box">
                 <label asp-for="PhoneNumber" class="control-label"></label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group Reg-input-box Reg-select-box">
                 <label asp-for="Country" class="control-label"></label>
-                <input asp-for="Country" class="form-control" />
+                <select asp-for="Country" class="form-control">
+                    <option value="Egypt">Egypt</option>
+                    <option value="United States">United States</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Sweden">Sweden</option>
+                    <!-- Add more options as needed -->
+                </select>
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group Reg-input-box Reg-select-box">
                 <label asp-for="Governorate" class="control-label"></label>
-                <input asp-for="Governorate" class="form-control" />
+                <select asp-for="Governorate" class="form-control">
+                    <option value="Beheira">Beheira</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Giza">Giza</option>
+                    <option value="Luxor">Luxor</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="Port Said">Port Said</option>
+                    <option value="Suez">Suez</option>
+                    <option value="Ismailia">Ismailia</option>
+                    <option value="Beni Suef">Beni Suef</option>
+                    <option value="Minya">Minya</option>
+                    <option value="Assiut">Assiut</option>
+                    <option value="Fayoum">Fayoum</option>
+                    <option value="Sohag">Sohag</option>
+                    <option value="Qena">Qena</option>
+                    <option value="Asyut">Asyut</option>
+                    <option value="Red Sea">Red Sea</option>
+                    <option value="Damietta">Damietta</option>
+                    <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+                    <option value="Matrouh">Matrouh</option>
+                    <!-- Add more options as needed -->
+                </select>
                 <span asp-validation-for="Governorate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group Reg-input-box Reg-select-box">
                 <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
+                <select asp-for="City" class="form-control">
+                    <option value="Mansoura">Mansoura</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Giza">Giza</option>
+                    <option value="Luxor">Luxor</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="Port Said">Port Said</option>
+                    <option value="Suez">Suez</option>
+                    <option value="Ismailia">Ismailia</option>
+                    <option value="Beni Suef">Beni Suef</option>
+                    <option value="Minya">Minya</option>
+                    <option value="Assiut">Assiut</option>
+                    <option value="Fayoum">Fayoum</option>
+                    <option value="Sohag">Sohag</option>
+                    <option value="Qena">Qena</option>
+                    <option value="Asyut">Asyut</option>
+                    <option value="Hurghada">Hurghada</option>
+                    <option value="Sharm El Sheikh">Sharm El Sheikh</option>
+                    <option value="Tanta">Tanta</option>
+                    <option value="Zagazig">Zagazig</option>
+                    <!-- Add more options as needed -->
+                </select>
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group Reg-input-box">
                 <label asp-for="UserName" class="control-label"></label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group Reg-input-box">
                 <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group Reg-input-box">
                 <label asp-for="ConfirmPassword" class="control-label"></label>
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group Reg-input-box">
+                <input type="submit" value="Create" class="btn btn-primary Reg-button" />
             </div>
         </form>
+        <div class="btn-danger">
+            <a asp-action="Login">Login</a>
+        </div>
     </section>
 </main>
 
-<div>
-    <a asp-action="Login">Login</a>
-</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }
