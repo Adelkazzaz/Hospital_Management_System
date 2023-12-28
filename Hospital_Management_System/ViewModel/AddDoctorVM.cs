@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Hospital_Management_System.ViewModel
 {
-    public class AddDoctorVM:IdentityUser
+    public class AddDoctorVM : IdentityUser
     {
         private string _specialization;
         private string _qualifications;
@@ -38,7 +38,18 @@ namespace Hospital_Management_System.ViewModel
 
         [Required]
         public string UserName { get; set; }
-        
+
+        [Required]
+        [DataType(DataType.Password)]
+        [StringLength(maximumLength: 50, MinimumLength = 6, ErrorMessage = "Password must be more than 6 characters.")]
+        public string Password { get; set; }
+
+        [Required]
+        [StringLength(maximumLength: 50, MinimumLength = 6, ErrorMessage = "Password must be more than 6 characters.")]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
+        public required string ConfirmPassword { get; set; }
+
 
         [Display(Name = "Department")]
         [Required]

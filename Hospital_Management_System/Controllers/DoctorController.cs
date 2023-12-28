@@ -3,11 +3,12 @@ using Hospital_Management_System.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System.Security.Claims;
 
 namespace Hospital_Management_System.Controllers
 {
-    [Authorize]
-	public class DoctorController : Controller
+    [Authorize(Roles = "Doctor")]
+    public class DoctorController : Controller
     {
         HMSEntites context = new HMSEntites();
 
@@ -16,6 +17,7 @@ namespace Hospital_Management_System.Controllers
         //*** Displaying Appointments Logic ***//
         public IActionResult DisplayAppointment(int _docID)
         {
+            
             var query = from a in context.Appointments
                         join p in context.Patients
                         on a.Patient_id equals p.ID
@@ -128,7 +130,7 @@ namespace Hospital_Management_System.Controllers
             {
                 context.Appointments.Update(appointment);
                 context.SaveChanges();
-                return Json(new { success = true, message = "Status Updated", newStatus = appointment.Status} );
+                return Json(new { success = true, message = "Status Updated", newStatus = appointment.Status });
             }
             else
             {

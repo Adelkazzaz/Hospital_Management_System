@@ -20,7 +20,7 @@ namespace Hospital_Management_System.Controllers
 
 			statistics.Add(GetGenderRisk("Common Cold"));
 			statistics.Add(GetDoctorAppointmentCount(91, 12));
-			statistics.Add(GetGovernorateDiseaseCount("Egypt"));
+			statistics.Add(GetGovernorateDiseaseCount("Bani Suef"));
 			statistics.Add(GetDeathCount());
 			statistics.Add(GetAvgAgeByDiagnosis());
 			statistics.Add(GetDepartmentPatientCount());

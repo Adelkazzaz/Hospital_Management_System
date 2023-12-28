@@ -33,29 +33,61 @@ namespace Hospital_Management_System.Controllers
         {
             if (ModelState.IsValid)
             {
-                //check
                 ApplicationUser userModel = await userManager.FindByNameAsync(UserVm.UserName);
+
                 if (userModel != null)
                 {
                     bool found = await userManager.CheckPasswordAsync(userModel, UserVm.Password);
+
                     if (found)
                     {
-                        Patient patient = context.Patients.FirstOrDefault(p => p.UserName == userModel.UserName);
+                        List<Claim> Claims = new List<Claim>();
+                        Claims.Add(new Claim("FullName", userModel.FullName));
+                        await signInMAnager.SignInWithClaimsAsync
+                            (userModel, UserVm.RememberMe, Claims);
+                        // Retrieve the user's roles
+                        var userRoles = await userManager.GetRolesAsync(userModel);
 
-                        // Store the patientid in a claim
-                        var claims = new List<Claim>
+                        // Redirect based on roles
+                        if (userRoles.Contains("Patient"))
+                        {
+                            Patient patient = context.Patients.FirstOrDefault(p => p.UserName == userModel.UserName);
+
+                            // Store the patientid in a claim
+                            var claims = new List<Claim>
                         {
                             new Claim("patientid", patient?.ID.ToString() ?? string.Empty)
                         };
-                        await userManager.AddClaimsAsync(userModel, claims);
-                        await signInMAnager.SignInAsync(userModel, UserVm.RememberMe);
-                        return RedirectToAction("Details", "Patient", new { patientid = patient?.ID });
+                            await userManager.AddClaimsAsync(userModel, claims);
+                            await signInMAnager.SignInAsync(userModel, UserVm.RememberMe);
+                            return RedirectToAction("Details", "Patient", new { patientid = patient?.ID });
+
+                        }
+                        else if (userRoles.Contains("Admin"))
+                        {
+                            return RedirectToAction("Index", "Statistics");
+                        }
+                        else if (userRoles.Contains("Doctor"))
+                        {
+                            var doctorId = context.Staffs
+                                            .Where(p => p.UserName == userModel.UserName)
+                                            .Select(p => p.ID)
+                                            .FirstOrDefault();
+                            return RedirectToAction("DisplayAppointment", "Doctor", new { _docID = doctorId });
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
                     }
                 }
+
                 ModelState.AddModelError("", "Username and password invalid");
             }
+
             return View(UserVm);
         }
+
 
 
         [HttpGet]
@@ -90,13 +122,14 @@ namespace Hospital_Management_System.Controllers
                     UserName = newUserVM.UserName,
                     PasswordHash = userManager.PasswordHasher.HashPassword(null, newUserVM.Password),
                 };
+                
                 patient.FullName = newUserVM.FullName;
                 patient.Gender = newUserVM.Gender;
                 patient.Country = newUserVM.Country;
                 patient.Blood_Type = newUserVM.BloodType;
                 patient.Governorate = newUserVM.Governorate;
                 patient.City = newUserVM.City;
-                patient.Password = newUserVM.Password;
+                patient.Password = userManager.PasswordHasher.HashPassword(null, newUserVM.Password);
                 patient.NurseId = 1;
                 patient.Phone = newUserVM.PhoneNumber;
                 patient.BDate = newUserVM.BDate;
@@ -112,7 +145,7 @@ namespace Hospital_Management_System.Controllers
                     context.Patients.Add(patient);
                     await signInMAnager.SignInAsync(userModel, false);
           
-                    return RedirectToAction("Details", "Patient", new { patientid = patient.ID });
+                    return RedirectToAction("Login", "Account");
                 }
                 else
                 {

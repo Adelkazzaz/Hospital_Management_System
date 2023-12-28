@@ -37,7 +37,7 @@ namespace Hospital_Management_System.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult CreateAppointment(int Doctor_id, DateTime Date, string Status)
         {
             try
@@ -120,27 +120,21 @@ namespace Hospital_Management_System.Controllers
 
         public IActionResult DisplayAppointment()
         {
-            try
+
+            // Retrieve the patient id from claims
+            var patientIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "patientid");
+
+            if (patientIdClaim != null && int.TryParse(patientIdClaim.Value, out int patientId))
             {
-                // Retrieve the patient id from claims
-                var patientIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "patientid");
+                // Fetch appointments for the logged-in patient
+                List<Appointment> appointments = context.Appointments
+                    .Where(appointment => appointment.Patient_id == patientId)
+                    .ToList();
 
-                if (patientIdClaim != null && int.TryParse(patientIdClaim.Value, out int patientId))
-                {
-                    // Fetch appointments for the logged-in patient
-                    List<Appointment> appointments = context.Appointments
-                        .Where(appointment => appointment.Patient_id == patientId)
-                        .ToList();
-
-                    return View("DisplayAppointment", appointments);
-                }
-
+                return View("DisplayAppointment", appointments);
             }
-            catch (Exception ex)
-            {
-                // Handle exceptions (e.g., log the exception)
-                return StatusCode(500, "An error occurred while processing the request.");
-            }
+
+
             // If patient ID cannot be retrieved, handle accordingly (e.g., show an error message or redirect)
             return RedirectToAction("Error", "Home");
         }
@@ -148,25 +142,20 @@ namespace Hospital_Management_System.Controllers
 
         public IActionResult DisplayMedicalRecord()
         {
-            try
-            {
-                // Retrieve the patient id from claims
-                var patientIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "patientid");
 
-                if (patientIdClaim != null && int.TryParse(patientIdClaim.Value, out int patientid))
-                {
-                    List<MedicalRecord> MedRec = context.MedicalRecords
-                        .Where(mr => mr.Patient_id == patientid)
-                        .ToList();
+            // Retrieve the patient id from claims
+            var patientIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "patientid");
 
-                    return View("DisplayMedicalRecord", MedRec);
-                }
-            }
-            catch (Exception ex)
+            if (patientIdClaim != null && int.TryParse(patientIdClaim.Value, out int patientid))
             {
-                // Handle exceptions (e.g., log the exception)
-                return StatusCode(500, "An error occurred while processing the request.");
+                List<MedicalRecord> MedRec = context.MedicalRecords
+                    .Where(mr => mr.Patient_id == patientid)
+                    .ToList();
+
+                return View("DisplayMedicalRecord", MedRec);
             }
+
+
 
             // If patient ID cannot be retrieved, handle accordingly (e.g., show an error message or redirect)
             return RedirectToAction("Error", "Home");
@@ -279,7 +268,6 @@ namespace Hospital_Management_System.Controllers
                 return StatusCode(500, "An error occurred while processing the request.");
             }
             return View();
-
         }
 
         [HttpPost]

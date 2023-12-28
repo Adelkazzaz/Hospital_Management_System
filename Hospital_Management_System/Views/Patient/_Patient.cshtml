@@ -55,7 +55,7 @@
 
 
                 <li style="transform: translateY(50vh);">
-                    <a asp-action="Logout">
+                    <a asp-action="Logout" asp-controller="Account">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -85,14 +85,14 @@
                     <div>
                         <div class="numbers">Welcome</div>
                         <div class="cardName">
-                            @{
+                           @*  @{
                                 // Assuming you have a ViewBag property named "DoctorName" containing the doctor's name
                                 string doctorName = ViewBag.Name as string;
                                 
                                     @Html.Raw(doctorName);
                                 
                                
-                            }
+                            } *@
                         </div>
                     </div>
                 </div>

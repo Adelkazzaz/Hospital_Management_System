@@ -31,7 +31,7 @@
 				</a>
 			</li>
 			<li >
-				<a href="/DoctorsManagment/Index" >
+				<a asp-action="Index" asp-controller="DoctorsManagment">
 					<i class='bx' >
 						<i class="fas fa-user-md"></i>
 					</i>
@@ -39,7 +39,7 @@
 				</a>
 			</li>
 			<li>
-				<a href ="/NursesManagment/Index" >
+				<a asp-action="Index" asp-controller="NursesManagment">
 					<i class='bx ' >
 						<i class="fas fa-user-nurse"></i>
 					</i>
@@ -47,9 +47,17 @@
 				</a>
 			</li>
 			<li>
+				<a asp-action="Index" asp-controller="Statistics">
+					<i class='bx '>
+						<i class="fa-solid fa-magnifying-glass-chart"></i>
+					</i>
+					<span class="text">Nurses</span>
+				</a>
+			</li>
+			<li>
 				<a href="/Roles/New">
 					<i class='bx '>
-						<i class="fas add-user"></i>
+						<i class="fa-solid fa-plus"></i>
 					</i>
 					<span class="text">Add Role</span>
 				</a>

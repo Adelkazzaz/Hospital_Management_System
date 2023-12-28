@@ -117,12 +117,20 @@
                 </div>
             </div>
             <div class="input-box address ">
-                <label asp-for="PasswordHash">Enter Password</label>
+                <label asp-for="Password">Enter Password</label>
                 <div class="column">
-                    <input class="form-control" asp-for="PasswordHash" placeholder="Enter Password" />
+                    <input class="form-control" asp-for="Password" placeholder="Enter Password" />
               
                 </div>
-                <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="input-box address ">
+                <label asp-for="ConfirmPassword">Renter Password</label>
+                <div class="column">
+                    <input class="form-control" asp-for="ConfirmPassword" placeholder="Renter Password" />
+
+                </div>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="gender-box">
                 <h3>Gender</h3>
