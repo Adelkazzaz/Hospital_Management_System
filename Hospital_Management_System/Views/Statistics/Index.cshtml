@@ -1,0 +1,205 @@
+﻿@model List<Hospital_Management_System.ViewModel.StatisticsHospitalVM>
+@{
+    Layout = "_ALayout";
+}
+
+
+    <ul class="box-info p-0">
+        <li>
+            <i class='bx '>
+                <i class="fa-solid fa-hospital"></i>
+            </i>
+            <span class="text">
+                <h3>@Model[10].DepartmentCount</h3>
+                <p>Departments</p>
+            </span>
+        </li>
+        <li>
+            <i class='bx'>
+                <i class="fas fa-user-md"></i>
+            </i>
+            <span class="text">
+                <h3>@Model[10].DoctorCount</h3>
+                <p>Doctors</p>
+            </span>
+        </li>
+        <li>
+            <i class='bx '>
+                <i class="fas fa-user-nurse"></i>
+            </i>
+            <span class="text">
+                <h3>@Model[10].NurseCount</h3>
+                <p>Nurses</p>
+            </span>
+        </li>
+        <li>
+            <i class='bx '>
+                <i class="fa-solid fa-hospital-user"></i>
+            </i>
+
+            <span class="text">
+                <h3>@Model[10].PatientCount</h3>
+                <p> Patients</p>
+            </span>
+        </li>
+    </ul>
+    <h1>statistics</h1>
+    <section>
+        <h2>Gender most at risk of contracting a certain disease</h2>
+        <div class="statistics-card">
+            <!-- Display Gender at Risk Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Disease</b>: Blood Cold</p>
+            <p><b>Most at risk</b>: @Model[0].Gender</p>
+            <p><b>Number of cases</b>: @Model[0].RiskCount</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>The number of appointment for specific Doctor </h2>
+        <div class="statistics-card">
+            <!-- Display Appointments for a Doctor Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Doctor</b>: @Model[1].DoctorFullName</p>
+            <p><b>Number of appointments</b>: @Model[1].AppointmentCount</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>The most common disease in a particular city</h2>
+        <div class="statistics-card">
+            <!-- Display Appointments for a Doctor Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Governorate</b>: @Model[2].Governorate</p>
+            <p><b>Diagnosis </b>: @Model[2].Diagnosis</p>
+            <p><b>Number Of Disease </b>: @Model[2].DiseaseCount</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>The number of deaths from a specific disease </h2>
+        <div class="statistics-card">
+            <!-- Display Appointments for a Doctor Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Name Of Disease</b>: Cancer</p>
+            <p><b>Number of deaths</b>: @Model[3].DeathCount</p>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Average Age by Diagnosis</h2>
+        <div class="statistics-card">
+            <table>
+                <tr>
+                    <th>Diagnosis</th>
+                    <th>Average Age</th>
+                </tr>
+                @foreach (var item in Model[4].AvgAgesByDiagnosis)
+                {
+                    <tr>
+                        <td>@item.Diagnosis</td>
+                        <td>@item.AvgAge</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2>The most ten commonly used medications monthly </h2>
+        <div class="statistics-card">
+            <table>
+                <tr>
+                    <th>Treatment</th>
+                    <th>medication taken</th>
+                </tr>
+                @foreach (var item in Model[7].topTreatments)
+                {
+                    <tr>
+                        <td>@item.Treatment</td>
+                        <td>@item.MedicalCount</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>The Department most welcoming Patients</h2>
+        <div class="statistics-card">
+            <!-- Display Appointments for a Doctor Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Department Name</b>: @Model[5].DepartmentName</p>
+            <p><b>Number of Patients</b>: @Model[5].PatientCount</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>most common disease during the month </h2>
+        <div class="statistics-card">
+            <!-- Display Appointments for a Doctor Statistics -->
+            <!-- Replace the content below with actual data -->
+            <p><b>Diagnosis</b>: @Model[6].Diagnosis</p>
+            <p><b>Month</b>: @Model[6].Month</p>
+            <p><b>Number of Disease</b>: @Model[6].DiseaseCount</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Average salaries of medical staff </h2>
+        <div class="statistics-card">
+            <p><b>Average salaries</b>: @Model[8].AverageSalary</p>
+        </div>
+    </section>
+    <section>
+        <h2>Blood types are most susceptible to a certain disease </h2>
+        <div class="statistics-card">
+            <p><b>Blood Type</b>: @Model[9].BloodType</p>
+            <p><b>Number Of Patient</b>: @Model[9].PatientCount</p>
+        </div>
+    </section>
+
+<style>
+
+    section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .statistics-card {
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>

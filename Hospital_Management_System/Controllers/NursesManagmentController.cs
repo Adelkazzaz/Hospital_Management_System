@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital_Management_System.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class NursesManagmentController : Controller
 	{
 		HMSEntites _context = new HMSEntites();
@@ -46,7 +46,7 @@ namespace Hospital_Management_System.Controllers
 			  BDate = s.BDate,
 			  Phone = s.Phone,
 			  Role = s.Role,
-			  Email = s.Email,
+			  UserName = s.UserName,
 			  Specialization = n.Specialization,
 			  DepartmentName = dept.Name,
 			  Qualifications = s.Qualifications,

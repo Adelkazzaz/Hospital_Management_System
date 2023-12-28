@@ -46,12 +46,20 @@
 					<span class="text">Nurses</span>
 				</a>
 			</li>
+			<li>
+				<a href="/Roles/New">
+					<i class='bx '>
+						<i class="fas add-user"></i>
+					</i>
+					<span class="text">Add Role</span>
+				</a>
+			</li>
 
 		</ul>
 		<ul class="side-menu">
 
 			<li>
-				<a href="#" class="logout" style="transform: translate(-2vw,20vh);">
+				<a asp-controller="Account" asp-action="Logout" class="logout" style="transform: translate(-2vw,20vh);">
 					<i class='bx' >
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</i>
@@ -91,45 +99,7 @@
 
 			</div>
 
-			<ul class="box-info p-0" >
-				<li>
-					<i class='bx '>
-						<i class="fa-solid fa-hospital"></i>
-					</i>
-					<span class="text">
-						<h3>@ViewBag.DepartmentCount</h3>
-						<p>Departments</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx'>
-						<i class="fas fa-user-md"></i>
-					</i>
-					<span class="text">
-						<h3>@ViewBag.DoctorCount</h3>
-						<p>Doctors</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx '>
-						<i class="fas fa-user-nurse"></i>
-					</i>
-					<span class="text">
-						<h3>@ViewBag.NurseCount</h3>
-						<p>Nurses</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx '>
-						<i class="fa-solid fa-hospital-user"></i>
-					</i>
-
-					<span class="text">
-						<h3>@ViewBag.PatientCount</h3>
-						<p> Patients</p>
-					</span>
-				</li>
-			</ul>
+			
 			<!--table for doctor-->
 			<div>
 				@RenderBody()
