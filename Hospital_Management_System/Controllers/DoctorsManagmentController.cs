@@ -83,12 +83,14 @@ namespace Hospital_Management_System.Controllers
 
         //Save doctor in Database 
         [HttpPost]
-        public IActionResult SaveDoctor(AddDoctorVM model)
+        public async Task<IActionResult> SaveDoctor(AddDoctorVM model)
         {
             if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddDoctor");
             }
+
+            int docID = GetNextDoctorId();
 
             var staff = new Staff
             {
@@ -97,7 +99,7 @@ namespace Hospital_Management_System.Controllers
                 BDate = model.BDate,
                 Phone = model.Phone,
                 UserName = model.UserName,
-                Password = model.PasswordHash,
+                Password = userManager.PasswordHasher.HashPassword(null, model.Password),
                 Salary = model.Salary,
                 Role = model.Role,
                 Qualifications = model.Qualifications,
@@ -106,19 +108,46 @@ namespace Hospital_Management_System.Controllers
                 Governorate = model.Governorate,
                 City = model.City,
                 Country = model.Country,
-                Shift= model.Shift
+                Shift = model.Shift,
+                ID = docID
             };
 
             var doctor = new Doctor
             {
+                Id = docID,
                 Specialization = model.Specialization,
                 Staff = staff
             };
 
+            ApplicationUser newDoctorUser = new ApplicationUser
+            {
+                FullName = model.FullName,
+                Gender = model.Gender,
+                BDate = model.BDate,
+                PhoneNumber = model.PhoneNumber,
+                Country = model.Country,
+                Governorate = model.Governorate,
+                City = model.City,
+                UserName = model.UserName,
+                Blood_Type = "A",
+                PasswordHash = userManager.PasswordHasher.HashPassword(null, model.Password),
+            };
+
+            // Check if the username already exists
+            if (await userManager.FindByNameAsync(model.UserName) != null)
+            {
+                ModelState.AddModelError("", "Username is already taken.");
+                return View("AddDoctor", model);
+            }
+
             try
             {
+                _context.Users.Add(newDoctorUser);
                 _context.Doctors.Add(doctor);
+                _context.Staffs.Add(staff);
                 _context.SaveChanges();
+
+                await userManager.AddToRoleAsync(newDoctorUser, "Doctor");
             }
             catch (Exception)
             {
@@ -247,6 +276,11 @@ namespace Hospital_Management_System.Controllers
 			return RedirectToAction("Index");
 		}
 
+        private int GetNextDoctorId()
+        {
+            // return max id and increment by 1
+            return _context.Doctors.Max(p => p.Id) + 1;
+        }
 
 
     }
