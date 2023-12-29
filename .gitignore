@@ -1,0 +1,180 @@
+# Visual Studio files
+.vscode/
+*.suo
+*.user
+*.suo
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.userosscache
+
+# Compiled files
+bin/
+obj/
+
+# NuGet Packages
+*.nuget/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folders
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Rider folder
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folders
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folders
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folders
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+
+# Mono Auto Generated Files
+mono_crash.*
