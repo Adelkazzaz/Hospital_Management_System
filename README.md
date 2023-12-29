@@ -24,8 +24,12 @@ This project is a Hospital Management System built using ASP.NET Core MVC with M
 - **wwwroot:** Holds static files (CSS, JavaScript).
 
 ## Screenshots
-![Screenshot 1](url-to-screenshot-1.png)
-*Caption for Screenshot 1*
+![Screenshot 1](https://github.com/Adelkazzaz/Hospital_Management_System/blob/main/Home.png)
+*Home Page*
 
-![Screenshot 2](url-to-screenshot-2.png)
-*Caption for Screenshot 2*
+
+![Screenshot 1](https://github.com/Adelkazzaz/Hospital_Management_System/blob/main/LoginAndRegister.png)
+*Login And Register*
+
+![Screenshot 2](https://github.com/Adelkazzaz/Hospital_Management_System/blob/main/PhoneView.png)
+*Phone View*
