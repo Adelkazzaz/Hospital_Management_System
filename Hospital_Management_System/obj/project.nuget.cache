@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7MADJ2GP+NEYZEVQMPLp6jvm1BqeW3OyCVUqA+v1wi1h5CJKK9ipFWkOhFzfDjtEI42gBAXY9i1idCxGsS2HNA==",
+  "dgSpecHash": "z3AUJXg4UT5tdaQUPf5Sb00uZbj1p8MKCoe/fEnLU/bVLonbdMbK6TadvuzNHDcoEseBejxjbHCnL2XkoezCuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AdelKazzaz\\Workspace\\HMS\\Hospital_Management_System\\Hospital_Management_System.csproj",
+  "projectFilePath": "C:\\Users\\AdelKazzaz\\Hospital_Management_System\\Hospital_Management_System\\Hospital_Management_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AdelKazzaz\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\AdelKazzaz\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",
