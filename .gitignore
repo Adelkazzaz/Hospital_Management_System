@@ -16,6 +16,9 @@
 *.user
 *.suo
 *.userosscache
+*.cache
+*.lock
+*.vsidx
 
 # Compiled files
 bin/
